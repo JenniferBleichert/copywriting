@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Bleichert – Content & Copywriting</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #F5F0E8;
+    --warm-white: #FDFAF5;
+    --olive: #7A8C5E;
+    --olive-light: #9aaa78;
+    --terracotta: #C47B5A;
+    --dark: #2C2C2C;
+    --mid: #5A5A5A;
+    --light: #9A9A9A;
+    --border: #E0D8CC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--sand);
+    padding: 80px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,123,90,0.12), transparent 70%);
+  }
+
+  .hero-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--olive);
+    margin-bottom: 32px;
+  }
+
+  .hero-bio {
+    font-size: 16px;
+    color: var(--mid);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--mid);
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 400;
+  }
+
+  /* DIVIDER */
+  .divider {
+    max-width: 860px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* SECTION */
+  section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 40px;
+  }
+
+  /* OFFER */
+  .offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 620px) {
+    .offer-grid { grid-template-columns: 1fr; }
+    section { padding: 48px 24px; }
+    .hero { padding: 60px 24px 48px; }
+  }
+
+  .offer-card {
+    background: var(--sand);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  }
+
+  .offer-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .offer-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .offer-card p {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .offer-for {
+    font-size: 12px;
+    color: var(--olive);
+    font-weight: 500;
+  }
+
+  /* SAMPLES */
+  .sample {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sample:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .sample-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .sample-type {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+
+  .sample-target {
+    font-size: 12px;
+    color: var(--light);
+    background: var(--sand);
+    padding: 3px 12px;
+    border-radius: 10px;
+  }
+
+  .spec-badge {
+    font-size: 11px;
+    color: var(--olive);
+    background: rgba(122,140,94,0.1);
+    padding: 3px 12px;
+    border-radius: 10px;
+  }
+
+  .sample h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--dark);
+    margin-bottom: 20px;
+    line-height: 1.35;
+  }
+
+  .sample-text {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.85;
+    max-width: 680px;
+  }
+
+  .sample-text p {
+    margin-bottom: 14px;
+  }
+
+  .sample-text strong {
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  .sample-analysis {
+    margin-top: 24px;
+    padding: 20px 24px;
+    background: var(--sand);
+    border-left: 3px solid var(--olive);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .sample-analysis .analysis-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 8px;
+  }
+
+  .sample-analysis p {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (max-width: 620px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .offer-grid { grid-template-columns: 1fr; }
+  }
+
+  .about-text h2 {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+
+  .strengths {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .strengths li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .strength-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .strengths li p {
+    font-size: 14px;
+    color: var(--mid);
+    margin: 0;
+  }
+
+  .strengths li strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 2px;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--dark);
+    padding: 72px 40px;
+    text-align: center;
+  }
+
+  .cta-inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .cta-section .eyebrow {
+    color: var(--olive-light);
+  }
+
+  .cta-section h2 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    color: white;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .cta-section p {
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--terracotta);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: #b36b4a; }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.5);
+    color: white;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    color: var(--light);
+    background: var(--sand);
+  }
+
+  /* FADE IN */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-inner > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .eyebrow { animation-delay: 0.1s; }
+  h1 { animation-delay: 0.2s; }
+  .hero-subtitle { animation-delay: 0.3s; }
+  .hero-bio { animation-delay: 0.4s; }
+  .tags { animation-delay: 0.5s; }
+
+  /* PRINT / PDF STYLES */
+  @media print {
+    @page {
+      margin: 1.8cm 1.5cm;
+      size: A4;
+    }
+
+    * { animation: none !important; }
+
+    body {
+      background: white !important;
+      font-size: 11pt;
+      color: #2C2C2C;
+    }
+
+    .hero {
+      background: #F5F0E8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      padding: 40px 32px 32px;
+    }
+
+    .hero::before { display: none; }
+
+    h1 { font-size: 28pt !important; }
+    .hero-subtitle { font-size: 13pt !important; }
+    .hero-bio { font-size: 10.5pt; }
+
+    section {
+      padding: 32px 32px;
+      max-width: 100%;
+    }
+
+    /* Prevent breaks inside key elements */
+    .sample {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .offer-card {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      background: #F5F0E8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .sample-analysis {
+      page-break-inside: avoid;
+      break-inside: avoid;
+      background: #F5F0E8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      border-left: 3px solid #7A8C5E !important;
+    }
+
+    /* Always start samples on same page as their heading */
+    .sample h2 {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    .sample-meta {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* Section labels never orphaned */
+    .section-label {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* About grid single column in print */
+    .about-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px;
+    }
+
+    .offer-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: #2C2C2C !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      padding: 40px 32px;
+    }
+
+    .cta-section h2 { color: white !important; }
+    .cta-section p { color: rgba(255,255,255,0.75) !important; }
+    .cta-section .eyebrow { color: #9aaa78 !important; }
+
+    .btn-primary, .btn-secondary { display: none; }
+
+    .cta-section::after {
+      content: "Jennifer.Bleichert@t-online.de  ·  linkedin.com/in/jenniferbleichert-0769233a7";
+      display: block;
+      color: rgba(255,255,255,0.8) !important;
+      font-size: 10pt;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    footer {
+      background: #F5F0E8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Content Design & Copywriting</p>
+    <h1>Jennifer Bleichert</h1>
+    <p class="hero-subtitle">Worte, die wirklich ankommen.</p>
+    <p class="hero-bio">
+      Ich schreibe für Marken und Menschen, die nicht laut, sondern ehrlich sein wollen.
+      Meine Texte entstehen aus echter Lebenserfahrung – mit Neurodiversität, Hochsensibilität
+      und dem Mut zum Querdenken. Das Ergebnis: Inhalte, die berühren, weil sie verstehen.
+    </p>
+    <div class="tags">
+      <span class="tag">Social Media Storytelling</span>
+      <span class="tag">Website & About-Pages</span>
+      <span class="tag">Mental Health & HSP</span>
+      <span class="tag">Purpose-driven Brands</span>
+      <span class="tag">Neurodiversität</span>
+      <span class="tag">100 % Remote</span>
+    </div>
+  </div>
+</div>
+
+<!-- ANGEBOT -->
+<section>
+  <p class="section-label">Was ich anbiete</p>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="offer-icon">✍️</div>
+      <h3>Social Media Storytelling</h3>
+      <p>Posts, die nicht scrollen lassen – weil sie etwas berühren. Ich schreibe Geschichten aus dem echten Leben, die Resonanz erzeugen statt nur Reichweite.</p>
+      <p class="offer-for">Für: Coaches · NGOs · Purpose Brands</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🌿</div>
+      <h3>Website & About-Page</h3>
+      <p>Wer bist du wirklich – und wie sagst du das, ohne dich zu verbiegen? Ich übersetze deine Haltung in Texte, die Vertrauen schaffen.</p>
+      <p class="offer-for">Für: Selbstständige · Startups · Beratungen</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">🎯</div>
+      <h3>Nischen-Content</h3>
+      <p>Tiefgründige Inhalte für spitze Zielgruppen: Neurodiversität, HSP, Mental Health, Eltern neurodivergenter Kinder. Texte für Menschen, die sich endlich verstanden fühlen wollen.</p>
+      <p class="offer-for">Für: Fachberatungen · Coaches · Verlage</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon">📣</div>
+      <h3>Kampagnen-Copywriting</h3>
+      <p>Von Pain Point zu Lösung – mit Verkaufspsychologie, die sich nicht wie Verkauf anfühlt. Klare Struktur, echter Ton, starker CTA.</p>
+      <p class="offer-for">Für: E-Books · Lead-Kampagnen · Launches</p>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:860px;margin:0 auto;padding:0 40px;"><div class="divider"></div></div>
+
+<!-- TEXTPROBEN -->
+<section>
+  <p class="section-label">Arbeitsproben</p>
+
+  <!-- Sample 1 -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="sample-type">LinkedIn Post</span>
+      <span class="sample-target">B2B · HR & Unternehmenskultur</span>
+      <span class="spec-badge">Eigeninitiative</span>
+    </div>
+    <h2>Schubladen sind für Socken da, nicht für Menschen.</h2>
+    <div class="sample-text">
+      <p>In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken. Wir reden viel über Neurodiversität – aber hören wir den Menschen auch wirklich zu?</p>
+      <p>Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt: Sie sehen die Welt durch eine völlig andere Linse. Jeder mit seinem individuellen „Betriebssystem".</p>
+      <p>Wer bereit ist, die Welt als Zukunftsprojekt zu betrachten, statt sie ständig mit dem Wissen der Vergangenheit zu vergleichen, wird belohnt. Denn neurodiverse Menschen bemerken Fehler, Ungereimtheiten oder kleinste Muster, die in herkömmlichen Systemen untergehen.</p>
+      <p><strong>Mein Impuls für Ihr Business:</strong> Nutzen wir diese Kraft für echtes Wachstum. Nicht nur für die Bilanz, sondern für uns als Menschen.</p>
+    </div>
+    <div class="sample-analysis">
+      <p class="analysis-label">Warum dieser Text funktioniert</p>
+      <p>Starke Eröffnungs-Metapher, die sofort differenziert. Klare Positionierung für eine B2B-Zielgruppe (HR, Führungskräfte) ohne erhobenen Zeigefinger. Ziel: Thought Leadership & Gesprächsöffnung.</p>
+    </div>
+  </div>
+
+  <!-- Sample 2 -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="sample-type">Instagram Post</span>
+      <span class="sample-target">Eltern neurodivergenter Kinder</span>
+      <span class="spec-badge">Eigeninitiative für fiktive Coachin</span>
+    </div>
+    <h2>„Geh auf dein Zimmer!" – Was wir jetzt wissen.</h2>
+    <div class="sample-text">
+      <p>Diesen Satz – oder das stille Treppensitzen – kennen viele von uns noch aus der eigenen Kindheit. Der letzte Ausweg, wenn das Kind „einfach nicht hört": Time-out.</p>
+      <p>Doch heutzutage wissen wir: Strenge ist oft nur eine Maske für Ratlosigkeit. Besonders bei neurodivergenten Kindern bewirkt Isolation das Gegenteil von dem, was wir wollen.</p>
+      <p>Es ist kein Trotz. Es ist keine böse Absicht. Es ist ein <strong>brennendes Nervensystem.</strong></p>
+      <p>Unsere sensiblen Kinder brauchen in diesen Momenten keine kalte Schulter, sondern Co-Regulation. Manchmal ist es ein sanftes Wort, manchmal nur das stille Danebensitzen.</p>
+      <p>Es gibt kein Handbuch, das für alle passt. Aber es gibt einen Weg: Wenn du lernst, hinter das Verhalten zu blicken, findest du den Schlüssel zu deinem Kind – und den Frieden für dich selbst.</p>
+      <p><strong>Fühlst du dich gerade allein gelassen?</strong> In meinen Coachings schauen wir gemeinsam hinter die Fassade. Meldet euch – ich verspreche: Ich schicke niemanden in die Ecke. 🌿</p>
+    </div>
+    <div class="sample-analysis">
+      <p class="analysis-label">Warum dieser Text funktioniert</p>
+      <p>Universeller Einstieg (alle kennen den Satz), emotionale Wendung, konkrete Fachbegriffe ohne Distanz, starker empathischer CTA. Ziel: Community-Aufbau & Coaching-Anfragen.</p>
+    </div>
+  </div>
+
+  <!-- Sample 3 -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="sample-type">LinkedIn / Fachblog</span>
+      <span class="sample-target">HR · Teams · Führung</span>
+      <span class="spec-badge">Eigeninitiative</span>
+    </div>
+    <h2>„Ich sehe was, was du nicht siehst ..." – Das unterschätzte Kapital hochsensibler Menschen.</h2>
+    <div class="sample-text">
+      <p>Was für Kinder ein Spiel ist, ist für hochsensible Menschen (HSP) der Alltag. Es ist kein „Zuviel-Fühlen", es ist ein High-Definition-Radar.</p>
+      <p>Während andere nur ein Parfüm riechen, differenzieren HSP die einzelnen Noten. Wo andere ein Bild sehen, erkennen sie den halben Millimeter, der das Gleichgewicht stört. Diese Detailtiefe ist kein Zufall, sondern echtes Qualitätsmanagement.</p>
+      <p>Doch der größte Mehrwert liegt oft zwischen den Zeilen: In Meetings das Pokerface zu durchschauen oder die Stimmung im Team zu spüren, bevor sie kippt. Das sind die Daten, die in keinem Protokoll stehen, aber über den Erfolg von Entscheidungen bestimmen.</p>
+      <p><strong>Mein Fazit:</strong> Hochsensibilität ist kein Makel, den man verstecken muss. Es ist die Macht, das Wesentliche zu erkennen, bevor es ausgesprochen wird.</p>
+    </div>
+    <div class="sample-analysis">
+      <p class="analysis-label">Warum dieser Text funktioniert</p>
+      <p>Reframing einer oft missverstanden Eigenschaft als Geschäftsvorteil. Spricht HR-Entscheider und Führungskräfte auf rationaler und emotionaler Ebene gleichzeitig an. Ziel: Positionierung als Expertin für neurodiversen Wert im Business-Kontext.</p>
+    </div>
+  </div>
+
+  <!-- Sample 4 -->
+  <div class="sample">
+    <div class="sample-meta">
+      <span class="sample-type">Instagram Post</span>
+      <span class="sample-target">Purpose Brand · Nachhaltigkeit</span>
+      <span class="spec-badge">Spec Work für Oatly</span>
+    </div>
+    <h2>Eine Kuh hat uns nicht gefragt. Wir fragen dich.</h2>
+    <div class="sample-text">
+      <p>Jeden Morgen, bevor der Tag laut wird, gibt es diesen einen Moment. Die Schüssel. Das Müsli. Die Entscheidung.</p>
+      <p>Wenn ich mich für Oatly entscheide, ist es kein Verzicht.<br>Es ist ein <strong>Ja.</strong></p>
+      <p>Ein Ja zur Kuh, die nicht durch die Hölle gehen muss, damit mein Frühstück schmeckt.<br>
+      Ein Ja zu Zutaten, die gedeihen dürfen – nicht funktionieren müssen.<br>
+      Ein Ja, das nicht nur auf der Zunge landet, sondern auch im Herzen.</p>
+      <p>Manche trinken Hafermilch wegen des Geschmacks.<br>
+      Manche wegen des Planeten.<br>
+      Manche, weil sie einfach aufgehört haben, Dinge zu trennen, die zusammengehören: was gut schmeckt und was sich gut anfühlt.</p>
+      <p><strong>Was ist dein Ja?</strong></p>
+      <p>☕ Wer trinkt gerade virtuell einen Café au Oatly?</p>
+    </div>
+    <div class="sample-analysis">
+      <p class="analysis-label">Warum dieser Text funktioniert</p>
+      <p>Kein erhobener Zeigefinger, keine Schuld – nur eine Einladung. Der Dreiklang der "Ja"-Sätze erzeugt Rhythmus und emotionale Verdichtung. Der mittlere Absatz holt alle ab: Überzeugten, Zögernden, Neugierige. Oatly-DNA: niemanden bekehren, aber alle berühren. Ziel: Markenbindung & Kommentar-Interaktion.</p>
+    </div>
+  </div>
+
+</section>
+
+<div style="max-width:860px;margin:0 auto;padding:0 40px;"><div class="divider"></div></div>
+
+<!-- ÜBER MICH -->
+<section>
+  <p class="section-label">Über mich</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Die Brückenbauerin.</h2>
+      <p>Ich bin Jennifer – Quereinsteigerin, Löwenmama und jemand, der Sprache schon immer als Werkzeug für echte Verbindung verstanden hat.</p>
+      <p>Meine Stärke liegt nicht in staubigen Diplomen, sondern in gelebter Erfahrung: mit Neurodiversität, Hochsensibilität und dem Alltag, der zwischen Systemzwang und innerer Wahrheit stattfindet.</p>
+      <p>Ich arbeite 100 % remote und nutze KI als strategisches Werkzeug – nie als Ersatz für echte Stimme.</p>
+    </div>
+    <ul class="strengths">
+      <li>
+        <div class="strength-dot"></div>
+        <div>
+          <strong>Empathie als Methode</strong>
+          <p>Ich schreibe aus dem Innenleben der Zielgruppe heraus – nicht über sie.</p>
+        </div>
+      </li>
+      <li>
+        <div class="strength-dot"></div>
+        <div>
+          <strong>Psychologisch fundiert</strong>
+          <p>Jeder Text hat ein Ziel: Resonanz, Vertrauen, Aktion. In dieser Reihenfolge.</p>
+        </div>
+      </li>
+      <li>
+        <div class="strength-dot"></div>
+        <div>
+          <strong>Authentische Nischen-Expertise</strong>
+          <p>HSP, PDA, Neurodiversität – kein angelesenes Wissen, sondern gelebte Realität.</p>
+        </div>
+      </li>
+      <li>
+        <div class="strength-dot"></div>
+        <div>
+          <strong>Verlässlich & fokussiert</strong>
+          <p>Deadlines sind Versprechen. Qualität ist keine Verhandlungssache.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <p class="eyebrow">Zusammenarbeit</p>
+    <h2>Bereit für Texte, die wirklich ankommen?</h2>
+    <p>Ich freue mich auf Projekte, bei denen echter Ton wichtiger ist als perfekte Hochglanz-Sprache. Schreib mir – ich antworte persönlich.</p>
+    <div class="cta-buttons">
+      <a href="mailto:Jennifer.Bleichert@t-online.de" class="btn-primary">Jetzt Kontakt aufnehmen</a>
+      <a href="https://www.linkedin.com/in/" class="btn-secondary">LinkedIn Profil</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Jennifer Bleichert · Content Design & Copywriting · 100 % Remote
+</footer>
+
+</body>
+</html>
