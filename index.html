@@ -42,6 +42,14 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+
 .container{
   width:min(920px,92%);
   margin:auto;
@@ -68,6 +76,7 @@ h1{
   font-size:clamp(38px,7vw,68px);
   line-height:1.15;
   margin-bottom:18px;
+  font-weight:600;
 }
 
 .hero-sub{
@@ -185,6 +194,7 @@ section{
 
 .sample:last-child{
   border-bottom:none;
+  margin-bottom:0;
 }
 
 .sample-top{
@@ -231,6 +241,7 @@ section{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:60px;
+  align-items:start;
 }
 
 .about img{
@@ -273,6 +284,11 @@ section{
   flex-shrink:0;
 }
 
+.point strong{
+  display:block;
+  margin-bottom:6px;
+}
+
 .cta{
   background:#2F2C29;
   color:white;
@@ -300,6 +316,11 @@ section{
   color:white;
   text-decoration:none;
   font-weight:600;
+  transition:0.2s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
 }
 
 footer{
@@ -308,6 +329,10 @@ footer{
   color:var(--soft);
   background:var(--sand);
   font-size:14px;
+}
+
+a{
+  color:inherit;
 }
 
 @media(max-width:760px){
@@ -478,6 +503,211 @@ Alle Preise zzgl. MwSt. (sofern anfallend). Erstkontakt ist immer unverbindlich.
 
 </div>
 </section>
+
+<div class="container">
+<div class="divider"></div>
+</div>
+
+<section>
+<div class="container">
+
+<p class="section-label">
+Arbeitsproben
+</p>
+
+<div class="sample">
+
+<div class="sample-top">
+<span class="badge">LinkedIn</span>
+<span class="badge">Neurodiversität & HR</span>
+</div>
+
+<h2>
+Schubladen sind für Socken da, nicht für Menschen.
+</h2>
+
+<p>
+In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken.
+Wir reden viel über Neurodiversität — aber hören wir den Menschen auch wirklich zu?
+</p>
+
+<p>
+Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt:
+Sie sehen die Welt durch eine völlig andere Linse.
+</p>
+
+<p>
+Wer bereit ist, Zukunft neu zu denken, wird belohnt.
+Denn neurodiverse Menschen erkennen Muster, Fehler und Chancen oft lange bevor andere sie sehen.
+</p>
+
+<div class="analysis">
+<strong>Warum dieser Text funktioniert</strong>
+
+Er verbindet emotionale Sprache mit Business-Relevanz.
+Kein belehrender Ton — sondern ein Perspektivwechsel, der im Kopf bleibt.
+</div>
+
+</div>
+
+<div class="sample">
+
+<div class="sample-top">
+<span class="badge">Instagram</span>
+<span class="badge">Mental Health & Elternschaft</span>
+</div>
+
+<h2>
+Es ist kein Trotz. Es ist ein brennendes Nervensystem.
+</h2>
+
+<p>
+Besonders bei neurodivergenten Kindern bewirkt Isolation oft genau das Gegenteil von dem, was wir eigentlich wollen.
+</p>
+
+<p>
+Unsere sensiblen Kinder brauchen nicht noch mehr Druck —
+sondern Co-Regulation.
+</p>
+
+<p>
+Manchmal ist es nur ein ruhiges Danebensitzen.
+Aber genau dort beginnt Sicherheit.
+</p>
+
+<div class="analysis">
+<strong>Warum dieser Text funktioniert</strong>
+
+Starker emotionaler Einstieg, klare Zielgruppenansprache und ein Ton, der Vertrauen statt Schuld erzeugt.
+</div>
+
+</div>
+
+</div>
+</section>
+
+<div class="container">
+<div class="divider"></div>
+</div>
+
+<section>
+<div class="container">
+
+<p class="section-label">
+Über mich
+</p>
+
+<div class="about">
+
+<div>
+
+<h2>
+Die neue Jennifer.
+</h2>
+
+<p>
+Ich bin Jennifer —
+Quereinsteigerin, Löwenmama und Copywriterin für Neuro-Inklusion.
+</p>
+
+<p>
+Ich glaube nicht an manipulative Marketing-Tricks.
+Ich glaube an Texte, die sich nach Menschen anfühlen.
+</p>
+
+<p>
+Nicht perfekt.
+Nicht laut.
+Aber ehrlich.
+</p>
+
+<p>
+Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Nische für mich —
+sondern gelebte Realität.
+</p>
+
+<p>
+Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.
+</p>
+
+</div>
+
+<div>
+
+<img src="Screenshot_20260514_082439_Gallery.jpg" alt="Jennifer Bleichert">
+
+<div class="points">
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Empathie als Stärke</strong>
+Texte aus dem Innenleben der Zielgruppe heraus.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Kommunikation auf Augenhöhe</strong>
+Keine künstliche Verknappung. Kein Verkaufsdruck.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Neuroinklusive Sprache</strong>
+Weniger Reiz. Mehr Sicherheit.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Asynchron & ruhig</strong>
+Zusammenarbeit ohne Dauer-Erreichbarkeit.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<p class="eyebrow">
+Zusammenarbeit
+</p>
+
+<h2>
+Lass uns schauen,<br>
+ob die Chemie stimmt.
+</h2>
+
+<p>
+Ganz ohne Druck.
+Ganz in deinem Tempo.
+</p>
+
+<a class="button" href="mailto:Jennifer.Bleichert@t-online.de">
+Nachricht schreiben
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Jennifer Bleichert · Copywriting für Neuro-Inklusion · 100 % Remote
+</footer>
 
 </body>
 </html>
