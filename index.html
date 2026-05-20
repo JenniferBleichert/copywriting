@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Arbeitsproben – Jennifer Bleichert</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Jennifer Bleichert – Copywriting für Neuro-Inklusion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-  --sand:#F2EDE4;
-  --warm:#FAF7F2;
-  --olive:#6B7D52;
-  --terracotta:#B56E4F;
-  --dark:#2A2A2A;
-  --mid:#4A4A4A;
-  --light:#8A8A8A;
-  --border:#DDD5C8;
+  --bg:#FCF8F3;
+  --sand:#F3ECE2;
+  --card:#F7F2EA;
+  --text:#2D2D2D;
+  --mid:#5E5E5E;
+  --soft:#8A857D;
+  --gold:#B78A5C;
+  --gold-soft:#D8BE9B;
+  --line:#E4DBCF;
+  --olive:#78836A;
 }
 
 *{
@@ -25,368 +29,685 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  background:var(--warm);
-  color:var(--dark);
+  background:var(--bg);
+  color:var(--text);
   font-family:'Inter',sans-serif;
   line-height:1.9;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+.container{
+  width:min(920px,92%);
+  margin:auto;
 }
 
 .hero{
-  background:var(--sand);
-  padding:90px 24px 70px;
-}
-
-.hero-inner{
-  max-width:860px;
-  margin:0 auto;
+  padding:110px 0 90px;
+  background:
+  radial-gradient(circle at top right, rgba(183,138,92,0.10), transparent 25%),
+  var(--sand);
 }
 
 .eyebrow{
-  font-size:12px;
-  letter-spacing:3px;
   text-transform:uppercase;
-  color:var(--terracotta);
-  margin-bottom:20px;
+  letter-spacing:3px;
+  font-size:12px;
+  color:var(--gold);
+  margin-bottom:24px;
   font-weight:600;
 }
 
 h1{
   font-family:'Lora',serif;
-  font-size:clamp(34px,5vw,58px);
-  line-height:1.2;
+  font-size:clamp(38px,7vw,68px);
+  line-height:1.15;
   margin-bottom:18px;
+  font-weight:600;
 }
 
-.hero p{
-  max-width:700px;
-  color:var(--mid);
-  font-size:17px;
-}
-
-section{
-  max-width:860px;
-  margin:0 auto;
-  padding:70px 24px;
-}
-
-.sample{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:34px;
+.hero-sub{
+  font-family:'Lora',serif;
+  color:var(--olive);
+  font-size:clamp(18px,3vw,24px);
   margin-bottom:34px;
 }
 
-.sample-type{
-  font-size:12px;
+.hero-text{
+  max-width:720px;
+  color:var(--mid);
+  font-size:18px;
+}
+
+.hero-text p{
+  margin-bottom:18px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:40px;
+}
+
+.tag{
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.7);
+  border:1px solid var(--line);
+  color:var(--mid);
+  font-size:14px;
+}
+
+section{
+  padding:90px 0;
+}
+
+.section-label{
   text-transform:uppercase;
-  letter-spacing:2px;
-  color:var(--terracotta);
-  margin-bottom:14px;
+  letter-spacing:3px;
+  color:var(--soft);
+  font-size:12px;
+  margin-bottom:50px;
   font-weight:600;
+}
+
+.grid{
+  display:grid;
+  gap:28px;
+}
+
+.offer-grid{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.card h3{
+  font-family:'Lora',serif;
+  margin-bottom:14px;
+  font-size:24px;
+}
+
+.card p{
+  color:var(--mid);
+  margin-bottom:16px;
+}
+
+.price{
+  color:var(--gold);
+  font-size:24px;
+  font-weight:600;
+  margin-top:10px;
+}
+
+.package-button{
+  display:inline-block;
+  margin-top:22px;
+  padding:12px 20px;
+  border:1px solid #556b2f;
+  border-radius:4px;
+  background:transparent;
+  color:#556b2f;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  transition:all 0.2s ease;
+  align-self:flex-start;
+}
+
+.package-button:hover{
+  background:rgba(85,107,47,0.06);
+}
+
+.divider{
+  height:1px;
+  background:var(--line);
+}
+
+.sample{
+  padding-bottom:50px;
+  margin-bottom:50px;
+  border-bottom:1px solid var(--line);
+}
+
+.sample:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+}
+
+.sample-top{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.badge{
+  padding:7px 14px;
+  border-radius:999px;
+  background:var(--sand);
+  color:var(--mid);
+  font-size:13px;
 }
 
 .sample h2{
   font-family:'Lora',serif;
-  font-size:30px;
+  font-size:clamp(26px,4vw,38px);
   line-height:1.35;
-  margin-bottom:20px;
+  margin-bottom:24px;
 }
 
-.teaser{
+.sample p{
   color:var(--mid);
-  margin-bottom:22px;
-}
-
-.read-more{
-  background:var(--sand);
-  border:none;
-  padding:14px 22px;
-  border-radius:10px;
-  cursor:pointer;
-  color:var(--dark);
-  font-size:15px;
-  font-weight:500;
-  transition:.2s ease;
-}
-
-.read-more:hover{
-  background:#e7dfd1;
-}
-
-.full-text{
-  display:none;
-  margin-top:28px;
-  color:var(--mid);
-}
-
-.full-text p{
   margin-bottom:18px;
 }
 
 .analysis{
-  margin-top:30px;
-  background:var(--sand);
+  margin-top:28px;
   padding:24px;
-  border-left:4px solid var(--olive);
-  border-radius:0 12px 12px 0;
+  border-left:3px solid var(--gold);
+  background:var(--sand);
+  border-radius:0 16px 16px 0;
 }
 
-.analysis-label{
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--olive);
+.analysis strong{
+  display:block;
   margin-bottom:10px;
-  font-weight:600;
 }
 
-.analysis p{
-  font-size:15px;
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.about img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--line);
+  margin-bottom:28px;
+}
+
+.about h2{
+  font-family:'Lora',serif;
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about p{
   color:var(--mid);
+  margin-bottom:18px;
+}
+
+.points{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.point{
+  display:flex;
+  gap:14px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--gold);
+  margin-top:12px;
+  flex-shrink:0;
+}
+
+.point strong{
+  display:block;
+  margin-bottom:6px;
+}
+
+.cta{
+  background:#2F2C29;
+  color:white;
+  text-align:center;
+  padding:90px 0;
+}
+
+.cta h2{
+  font-family:'Lora',serif;
+  font-size:clamp(32px,5vw,50px);
+  margin-bottom:20px;
+}
+
+.cta p{
+  color:rgba(255,255,255,0.72);
+  max-width:680px;
+  margin:0 auto 36px;
+}
+
+.button{
+  display:inline-block;
+  padding:16px 30px;
+  border-radius:12px;
+  background:var(--gold);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
 }
 
 footer{
+  padding:36px;
   text-align:center;
-  padding:40px 20px;
-  color:var(--light);
+  color:var(--soft);
   background:var(--sand);
   font-size:14px;
 }
 
-.back-home{
-  display:inline-block;
-  margin-top:34px;
-  color:var(--olive);
-  text-decoration:none;
-  font-weight:500;
+a{
+  color:inherit;
 }
 
-.back-home:hover{
-  text-decoration:underline;
+@media(max-width:760px){
+
+  .hero{
+    padding:80px 0 60px;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .package-button{
+    align-self:center;
+    text-align:center;
+  }
+
 }
 
-@media(max-width:640px){
-
-.sample{
-  padding:24px;
-}
-
-.sample h2{
-  font-size:24px;
-}
-
-.hero{
-  padding:70px 24px 56px;
-}
-
-}
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Arbeitsproben & Texte</p>
+<header class="hero">
+<div class="container">
 
-    <h1>Texte ohne Maske.</h1>
+<p class="eyebrow">
+Copywriting für Neuro-Inklusion
+</p>
 
-    <p>
-      Nicht jeder möchte sofort Kontakt aufnehmen.
-      Manche lesen erst. Spüren erst.
-      Deshalb findest du hier ausgewählte Arbeitsproben rund um Neurodiversität, emotionale Markenkommunikation und neuroinklusive Sprache.
-    </p>
+<h1>
+Texte ohne Maske.<br>
+Ohne Druck.<br>
+Mit echter Verbindung.
+</h1>
 
-    <a class="back-home" href="index.html">← Zurück zur Startseite</a>
-  </div>
+<p class="hero-sub">
+Authentisch statt manipulativ.
+</p>
+
+<div class="hero-text">
+
+<p>
+Ich schreibe für Coaches, Mental-Health-Brands und neuroinklusive Unternehmen, die Menschen nicht überreden wollen — sondern wirklich erreichen möchten.
+</p>
+
+<p>
+Als hochsensible Mutter eines neurodivergenten Kindes kenne ich die Zwischenräume, in denen klassische Kommunikation oft scheitert.
+</p>
+
+<p>
+Für viele bedeutet Remote-Arbeit Freiheit.
+Für mich bedeutet sie: da sein können.
+Beim Meltdown. Bei Überforderung. Beim emotionalen Muskelkater.
+Halten – aushalten – bleiben.
+</p>
+
+<p>
+Genau diese Regulations-Kompetenz bringe ich heute in meine Texte ein.
+Denn Menschen fühlen, ob Kommunikation Druck macht —
+oder Sicherheit gibt.
+</p>
+
+</div>
+
+<div class="tags">
+<span class="tag">Neuro-Inklusion</span>
+<span class="tag">Mental Health</span>
+<span class="tag">Website Copy</span>
+<span class="tag">Storytelling</span>
+<span class="tag">LinkedIn & Instagram</span>
+<span class="tag">Asynchrone Zusammenarbeit</span>
+</div>
+
+</div>
+</header>
+
+<section>
+<div class="container">
+
+<p class="section-label">
+Preise & Pakete
+</p>
+
+<p style="color:var(--mid); margin-bottom:30px;">
+Transparente Richtwerte. Keine versteckten Kosten. Wenn du Fragen hast, klären wir alles vorab in Ruhe.
+</p>
+
+<div class="grid offer-grid">
+
+<div class="card">
+<h3>Neuro-Check (Audit)</h3>
+
+<p>
+Ich schaue mir deine Website oder Salespage an und gebe dir ruhiges, klares Feedback zu möglichen Hürden in der Kommunikation.
+</p>
+
+<p class="price">
+ab 250 €
+</p>
+
+<a class="package-button"
+href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Neuro-Check">
+Dieses Paket anfragen
+</a>
+
+</div>
+
+<div class="card">
+<h3>Neuro-inklusive Landingpage</h3>
+
+<p>
+Eine Verkaufsseite, die Orientierung gibt statt Druck zu erzeugen. Klar, menschlich und auf deine Zielgruppe abgestimmt.
+</p>
+
+<p class="price">
+ab 1.200 €
+</p>
+
+<a class="package-button"
+href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Stimme%20%26%20Strategie">
+Dieses Paket anfragen
+</a>
+
+</div>
+
+<div class="card">
+<h3>Content-Begleitung</h3>
+
+<p>
+Begleitung für LinkedIn oder Newsletter. Kontinuierlich, ohne Hektik, in einem verlässlichen Rhythmus.
+</p>
+
+<p class="price">
+ab 800 € / Monat
+</p>
+
+<a class="package-button"
+href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Langfristige%20Begleitung">
+Dieses Paket anfragen
+</a>
+
+</div>
+
+<div class="card">
+<h3>Individuelle Projekte</h3>
+
+<p>
+E-Mail-Strecken, Texte oder Skripte nach Bedarf. Alles wird vorher gemeinsam ruhig besprochen.
+</p>
+
+<p class="price">
+120 € / Stunde
+</p>
+
+</div>
+
+</div>
+
+<p style="color:var(--soft); margin-top:28px; font-size:14px;">
+Alle Preise zzgl. MwSt. (sofern anfallend). Erstkontakt ist immer unverbindlich.
+</p>
+
+</div>
+</section>
+
+<div class="container">
+<div class="divider"></div>
 </div>
 
 <section>
+<div class="container">
 
-<div class="sample">
-  <div class="sample-type">Lead Magnet · PDA · Eltern</div>
-
-  <h2>Vom Kampf zum Verstehen: 5 Strategien für den Alltag mit PDA-Kindern</h2>
-
-  <p class="teaser">
-    Was wie Trotz aussieht, ist oft ein Nervensystem im Alarmmodus.
-    Dieser Text verbindet emotionale Entlastung mit klarer Orientierung.
-  </p>
-
-  <button class="read-more" onclick="toggleText('text1')">
-    Text lesen →
-  </button>
-
-  <div class="full-text" id="text1">
-
-<p>„Du musst nur konsequenter sein!“ – Wie oft hast du diesen Satz schon gehört und dich dabei völlig allein gelassen gefühlt?</p>
-
-<p>Du gibst alles, aber klassische Regeln führen bei euch nur zu noch mehr Eskalation. Was sich für andere wie Trotz anfühlt, ist in Wahrheit ein Nervensystem im Alarmmodus.</p>
-
-<p>Bei PDA (Pathological Demand Avoidance) ist jedes „Du musst“ eine Bedrohung für die Sicherheit deines Kindes. Du bist nicht unfähig – dein Kind braucht nur einen anderen Schlüssel.</p>
-
-<p>Es gibt einen Weg raus aus dem ständigen Kampf. Es ist der Wechsel vom Gehorsam hin zum Verstehen.</p>
-
-<p>In diesem Guide zeige ich dir:</p>
-
-<p>
-• Low Demand Parenting – warum weniger Druck oft zu mehr Kooperation führt.<br><br>
-
-• Co-Regulation – wie du der Anker bleibst, wenn das Nervensystem deines Kindes Achterbahn fährt.<br><br>
-
-• Die Macht des Humors – wie Leichtigkeit Situationen entschärfen kann, bevor sie explodieren.
+<p class="section-label">
+Arbeitsproben
 </p>
 
-<p>Du musst das nicht alleine schaffen.</p>
+<div class="sample">
+
+<div class="sample-top">
+<span class="badge">LinkedIn</span>
+<span class="badge">Neurodiversität & HR</span>
+</div>
+
+<h2>
+Schubladen sind für Socken da, nicht für Menschen.
+</h2>
 
 <p>
-Hol dir jetzt meine 5 Sofort-Strategien für einen PDA-gerechten Alltag und atme endlich wieder durch.
+In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken.
+Wir reden viel über Neurodiversität — aber hören wir den Menschen auch wirklich zu?
+</p>
+
+<p>
+Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt:
+Sie sehen die Welt durch eine völlig andere Linse.
+</p>
+
+<p>
+Wer bereit ist, Zukunft neu zu denken, wird belohnt.
+Denn neurodiverse Menschen erkennen Muster, Fehler und Chancen oft lange bevor andere sie sehen.
 </p>
 
 <div class="analysis">
-<div class="analysis-label">Warum dieser Text funktioniert</div>
+<strong>Warum dieser Text funktioniert</strong>
 
-<p>
-Direkter emotionaler Einstieg mit einem Satz, den fast jede betroffene Familie kennt.
-Der Text nimmt Schuld raus, erklärt PDA verständlich und verbindet Fachwissen mit emotionaler Sicherheit.
-</p>
+Er verbindet emotionale Sprache mit Business-Relevanz.
+Kein belehrender Ton — sondern ein Perspektivwechsel, der im Kopf bleibt.
 </div>
 
-  </div>
 </div>
 
 <div class="sample">
 
-<div class="sample-type">Landingpage · Coaching</div>
+<div class="sample-top">
+<span class="badge">Instagram</span>
+<span class="badge">Mental Health & Elternschaft</span>
+</div>
 
-<h2>Raus aus der Verzweiflung – rein in ein liebevolles Leben mit deinem Kind.</h2>
-
-<p class="teaser">
-Eine neuroinklusive Landingpage für Eltern neurodivergenter Kinder.
-Mit Fokus auf Sicherheit statt Druck.
-</p>
-
-<button class="read-more" onclick="toggleText('text2')">
-Text lesen →
-</button>
-
-<div class="full-text" id="text2">
-
-<p><strong>Ich bin Maja.</strong> Heilpädagogin, Mama eines neurodivergenten Sohnes – und ich kenne diesen Moment, in dem man denkt: Warum funktioniert bei uns nichts, was bei anderen klappt?</p>
-
-<p>Ob mit oder ohne Diagnose: In meinem Coaching zählen Menschen. Keine Berichte.</p>
-
-<p><strong>Dein Kind bringt dich an deine Grenze – und niemand glaubt dir.</strong></p>
-
-<p>Dein Kind lässt sich nichts sagen? Dreht durch, wenn Pläne sich ändern? Oder versteht einfach nicht, warum dieser Termin gerade wichtig ist?</p>
-
-<p>Die Erschöpfung stapelt sich. Und dazu dieser Satz:</p>
-
-<p><em>„Du musst nur konsequenter sein.“</em></p>
-
-<p>Vielleicht ist alles einfach nur verdammt anstrengend. Das darfst du sagen. Hier wird niemand urteilen.</p>
-
-<p><strong>Ich bin Heilpädagogin – und trotzdem dachte ich irgendwann:</strong> Ich schaffe es nicht einmal, mein eigenes Kind zu verstehen.</p>
-
-<p>Bis ich mich wirklich mit dem ASS- und PDA-Profil meines Sohnes beschäftigt habe. Nicht als Fachfrau. Sondern als Mama.</p>
-
-<p>Seitdem sehe ich nicht mehr nur das Verhalten. Ich sehe das Kind dahinter.</p>
-
-<p>Co-Regulation. Low Demand. Deeskalation. Selbstfürsorge für Eltern.</p>
-
-<p>Hinter jedem dieser Begriffe steckt eine konkrete Möglichkeit, die du morgen anwenden kannst. Nicht als Rezept. Sondern als Werkzeug, das zu euch passt.</p>
-
-<p>In 6 Wochen arbeiten wir nicht an deinem Kind. Wir arbeiten mit dir. Für euch beide.</p>
-
-<div class="analysis">
-<div class="analysis-label">Warum dieser Text funktioniert</div>
+<h2>
+Es ist kein Trotz. Es ist ein brennendes Nervensystem.
+</h2>
 
 <p>
-Klassische Landingpage-Struktur kombiniert mit emotionaler Sicherheit.
-Der Text erzeugt sofort Verständnis statt Bewertung und schafft dadurch Vertrauen.
+Besonders bei neurodivergenten Kindern bewirkt Isolation oft genau das Gegenteil von dem, was wir eigentlich wollen.
 </p>
-</div>
-
-</div>
-</div>
-
-<div class="sample">
-
-<div class="sample-type">Instagram Post · Neurodiversität</div>
-
-<h2>Du wirst gesehen. Ich sehe dich.</h2>
-
-<p class="teaser">
-Ein emotionaler Community-Text für Eltern neurodivergenter Kinder.
-Ruhig geschrieben. Ohne Schuld. Ohne Drama.
-</p>
-
-<button class="read-more" onclick="toggleText('text3')">
-Text lesen →
-</button>
-
-<div class="full-text" id="text3">
-
-<p>Beim Einkaufen die Blicke der anderen zu spüren, während du einfach nur versuchst, Mama zu sein.</p>
-
-<p>Ich war erst letzten Dienstag im Supermarkt. Mein Sohn war eigentlich gut drauf.</p>
-
-<p>Dann fing ein Baby an zu schreien.</p>
-
-<p>Es wurde ihm zu laut. Zu hell. Zu viel.</p>
-
-<p>Ich habe mich auf den Boden gesetzt. Still. War einfach bei ihm.</p>
-
-<p>Aber die Menschen haben geschaut. Geflüstert. Manche haben verächtlich gelächelt.</p>
-
-<p>Nicht alle. Aber zu viele.</p>
-
-<p>Ich wollte mich kurz schämen.</p>
-
-<p>Dann sah ich meinen Sohn – und war für uns beide stark.</p>
-
-<p>Wir haben diesen Moment gemeinsam geschafft.</p>
-
-<p>Es ist nicht immer leicht.</p>
-
-<p>Aber vielleicht hilft dir das hier:</p>
-
-<p><strong>Ich sehe dich. Du bist nicht allein.</strong></p>
-
-<p>Steh für dich und deine Familie ein. Die Stimmen der anderen werden leiser, sobald ihr eure eigene findet.</p>
-
-<div class="analysis">
-<div class="analysis-label">Warum dieser Text funktioniert</div>
 
 <p>
-Der Text beschreibt keine Theorie, sondern einen echten Moment.
-Genau dadurch entsteht Verbindung.
-Kurze Absätze sorgen zusätzlich für Ruhe und gute Lesbarkeit.
+Unsere sensiblen Kinder brauchen nicht noch mehr Druck —
+sondern Co-Regulation.
 </p>
+
+<p>
+Manchmal ist es nur ein ruhiges Danebensitzen.
+Aber genau dort beginnt Sicherheit.
+</p>
+
+<div class="analysis">
+<strong>Warum dieser Text funktioniert</strong>
+
+Starker emotionaler Einstieg, klare Zielgruppenansprache und ein Ton, der Vertrauen statt Schuld erzeugt.
 </div>
 
 </div>
+
+</div>
+</section>
+
+<div class="container">
+<div class="divider"></div>
+</div>
+
+<section>
+<div class="container">
+
+<p class="section-label">
+Über mich
+</p>
+
+<div class="about">
+
+<div>
+
+<h2>
+Die neue Jennifer.
+</h2>
+
+<p>
+Ich bin Jennifer —
+Quereinsteigerin, Löwenmama und Copywriterin für Neuro-Inklusion.
+</p>
+
+<p>
+Ich glaube nicht an manipulative Marketing-Tricks.
+Ich glaube an Texte, die sich nach Menschen anfühlen.
+</p>
+
+<p>
+Nicht perfekt.
+Nicht laut.
+Aber ehrlich.
+</p>
+
+<p>
+Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Nische für mich —
+sondern gelebte Realität.
+</p>
+
+<p>
+Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.
+</p>
+
+</div>
+
+<div>
+
+<img src="Screenshot_20260514_082439_Gallery.jpg" alt="Jennifer Bleichert">
+
+<div class="points">
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Empathie als Stärke</strong>
+Texte aus dem Innenleben der Zielgruppe heraus.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Kommunikation auf Augenhöhe</strong>
+Keine künstliche Verknappung. Kein Verkaufsdruck.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Neuroinklusive Sprache</strong>
+Weniger Reiz. Mehr Sicherheit.
+</div>
+</div>
+
+<div class="point">
+<div class="dot"></div>
+<div>
+<strong>Asynchron & ruhig</strong>
+Zusammenarbeit ohne Dauer-Erreichbarkeit.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<p class="eyebrow">
+Zusammenarbeit
+</p>
+
+<h2>
+Lass uns schauen,<br>
+ob die Chemie stimmt.
+</h2>
+
+<p>
+Ganz ohne Druck.
+Ganz in deinem Tempo.
+</p>
+
+<a class="button" href="mailto:Jennifer.Bleichert@t-online.de">
+Nachricht schreiben
+</a>
+
 </div>
 
 </section>
 
 <footer>
-© 2026 Jennifer Bleichert · Neuroinklusive Kommunikation · Texte ohne Maske
+© 2026 Jennifer Bleichert · Copywriting für Neuro-Inklusion · 100 % Remote
 </footer>
-
-<script>
-function toggleText(id){
-  const element = document.getElementById(id);
-
-  if(element.style.display === "block"){
-    element.style.display = "none";
-  } else {
-    element.style.display = "block";
-  }
-}
-</script>
 
 </body>
 </html>
