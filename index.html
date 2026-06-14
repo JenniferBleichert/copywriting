@@ -1,53 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Jennifer Bleichert – Copywriting für Neuro-Inklusion</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Bleichert – Copywriting</title>
+<meta name="description" content="Website-Texte, Landingpages und Content, die Vertrauen aufbauen statt Druck erzeugen. Copywriting von Jennifer Bleichert.">
 
 <style>
-
 :root{
   --bg:#FCF8F3;
   --sand:#F3ECE2;
-  --card:#F7F2EA;
-  --text:#2D2D2D;
-  --mid:#5E5E5E;
-  --soft:#8A857D;
+  --card:#F8F1E8;
+  --text:#2D2A27;
+  --mid:#5E5A55;
+  --soft:#8A8177;
   --gold:#B78A5C;
-  --gold-soft:#D8BE9B;
+  --olive:#6F7B65;
   --line:#E4DBCF;
-  --olive:#78836A;
+  --dark:#2F2C29;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   background:var(--bg);
   color:var(--text);
-  font-family:'Inter',sans-serif;
-  line-height:1.9;
+  font-family:Inter, Arial, sans-serif;
+  line-height:1.85;
   font-size:16px;
-  -webkit-font-smoothing:antialiased;
-}
-
-@media (prefers-reduced-motion: reduce){
-  *{
-    animation:none !important;
-    transition:none !important;
-    scroll-behavior:auto !important;
-  }
 }
 
 .container{
@@ -55,65 +37,113 @@ body{
   margin:auto;
 }
 
-.hero{
-  padding:110px 0 90px;
-  background:
-  radial-gradient(circle at top right, rgba(183,138,92,0.10), transparent 25%),
-  var(--sand);
-}
-
-.eyebrow{
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:12px;
-  color:var(--gold);
-  margin-bottom:24px;
-  font-weight:600;
+h1,h2,h3{
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:500;
+  line-height:1.12;
+  color:var(--text);
 }
 
 h1{
-  font-family:'Lora',serif;
-  font-size:clamp(38px,7vw,68px);
-  line-height:1.15;
-  margin-bottom:18px;
-  font-weight:600;
+  font-size:clamp(42px,9vw,76px);
+  margin-bottom:22px;
+}
+
+h2{
+  font-size:clamp(32px,6vw,54px);
+  margin-bottom:24px;
+}
+
+h3{
+  font-size:26px;
+  margin-bottom:16px;
+}
+
+p{margin-bottom:18px}
+
+.hero{
+  position:relative;
+  padding:110px 0 90px;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg, rgba(252,248,243,.97) 0%, rgba(252,248,243,.92) 46%, rgba(252,248,243,.55) 100%),
+    linear-gradient(180deg, rgba(243,236,226,.08), rgba(243,236,226,.94)),
+    url("jenny-bulldozer.jpg");
+  background-size:cover;
+  background-position:center 38%;
+}
+
+.hero-inner{
+  max-width:760px;
+  position:relative;
+  z-index:2;
 }
 
 .hero-sub{
-  font-family:'Lora',serif;
+  font-family:Georgia, "Times New Roman", serif;
   color:var(--olive);
-  font-size:clamp(18px,3vw,24px);
+  font-size:clamp(20px,4vw,30px);
+  line-height:1.35;
   margin-bottom:34px;
 }
 
-.hero-text{
-  max-width:720px;
-  color:var(--mid);
-  font-size:18px;
+.hero-box{
+  margin:34px 0;
+  padding:28px;
+  background:rgba(255,255,255,.66);
+  border:1px solid var(--line);
+  border-radius:24px;
 }
 
-.hero-text p{
-  margin-bottom:18px;
+.hero-quote{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:clamp(24px,5vw,40px);
+  color:var(--olive);
+  line-height:1.25;
+  margin:18px 0;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:34px;
+}
+
+.button,.package-button,.big-link{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:12px;
+  background:var(--gold);
+  color:white;
+  text-decoration:none;
+  font-weight:650;
+}
+
+.button.secondary{
+  background:transparent;
+  color:var(--olive);
+  border:1px solid var(--olive);
 }
 
 .tags{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin-top:40px;
+  margin-top:38px;
 }
 
 .tag{
-  padding:10px 18px;
+  padding:10px 16px;
   border-radius:999px;
-  background:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,.7);
   border:1px solid var(--line);
   color:var(--mid);
   font-size:14px;
 }
 
 section{
-  padding:90px 0;
+  padding:88px 0;
 }
 
 .section-label{
@@ -121,8 +151,27 @@ section{
   letter-spacing:3px;
   color:var(--soft);
   font-size:12px;
-  margin-bottom:50px;
+  margin-bottom:42px;
+  font-weight:700;
+}
+
+.text-block{
+  max-width:760px;
+  color:var(--mid);
+}
+
+.highlight{
+  margin-top:28px;
+  padding:26px;
+  background:var(--sand);
+  border-left:4px solid var(--gold);
+  border-radius:0 18px 18px 0;
   font-weight:600;
+}
+
+.divider{
+  height:1px;
+  background:var(--line);
 }
 
 .grid{
@@ -137,58 +186,35 @@ section{
 .card{
   background:var(--card);
   border:1px solid var(--line);
-  border-radius:22px;
+  border-radius:24px;
   padding:34px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
 }
 
-.card h3{
-  font-family:'Lora',serif;
-  margin-bottom:14px;
-  font-size:24px;
-}
-
 .card p{
   color:var(--mid);
-  margin-bottom:16px;
 }
 
 .price{
   color:var(--gold);
   font-size:24px;
-  font-weight:600;
-  margin-top:10px;
+  font-weight:700;
+  margin-top:8px;
 }
 
 .package-button{
-  display:inline-block;
-  margin-top:22px;
-  padding:12px 20px;
-  border:1px solid #556b2f;
-  border-radius:4px;
+  margin-top:20px;
   background:transparent;
-  color:#556b2f;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:500;
-  transition:all 0.2s ease;
+  border:1px solid var(--olive);
+  color:var(--olive);
   align-self:flex-start;
 }
 
-.package-button:hover{
-  background:rgba(85,107,47,0.06);
-}
-
-.divider{
-  height:1px;
-  background:var(--line);
-}
-
 .sample{
-  padding-bottom:50px;
-  margin-bottom:50px;
+  padding-bottom:48px;
+  margin-bottom:48px;
   border-bottom:1px solid var(--line);
 }
 
@@ -197,11 +223,11 @@ section{
   margin-bottom:0;
 }
 
-.sample-top{
+.badges{
   display:flex;
-  gap:12px;
   flex-wrap:wrap;
-  margin-bottom:20px;
+  gap:12px;
+  margin-bottom:18px;
 }
 
 .badge{
@@ -212,67 +238,48 @@ section{
   font-size:13px;
 }
 
-.sample h2{
-  font-family:'Lora',serif;
-  font-size:clamp(26px,4vw,38px);
-  line-height:1.35;
-  margin-bottom:24px;
-}
-
-.sample p{
-  color:var(--mid);
-  margin-bottom:18px;
+.sample h3{
+  font-size:clamp(28px,5vw,40px);
 }
 
 .analysis{
-  margin-top:28px;
-  padding:24px;
-  border-left:3px solid var(--gold);
+  margin-top:24px;
+  padding:22px;
   background:var(--sand);
+  border-left:3px solid var(--gold);
   border-radius:0 16px 16px 0;
-}
-
-.analysis strong{
-  display:block;
-  margin-bottom:10px;
+  color:var(--mid);
 }
 
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:56px;
   align-items:start;
 }
 
 .about img{
-  width:220px;
-  height:220px;
-  border-radius:50%;
+  width:100%;
+  max-width:430px;
+  aspect-ratio:4/5;
   object-fit:cover;
+  object-position:center;
+  border-radius:26px;
   border:4px solid var(--line);
-  margin-bottom:28px;
-}
-
-.about h2{
-  font-family:'Lora',serif;
-  font-size:42px;
-  margin-bottom:20px;
-}
-
-.about p{
-  color:var(--mid);
-  margin-bottom:18px;
+  box-shadow:0 18px 45px rgba(45,45,45,.10);
 }
 
 .points{
   display:flex;
   flex-direction:column;
   gap:22px;
+  margin-top:28px;
 }
 
 .point{
   display:flex;
   gap:14px;
+  color:var(--mid);
 }
 
 .dot{
@@ -286,431 +293,336 @@ section{
 
 .point strong{
   display:block;
-  margin-bottom:6px;
+  color:var(--text);
+  margin-bottom:4px;
 }
 
-.cta{
-  background:#2F2C29;
-  color:white;
-  text-align:center;
-  padding:90px 0;
-}
-
-.cta h2{
-  font-family:'Lora',serif;
-  font-size:clamp(32px,5vw,50px);
-  margin-bottom:20px;
-}
-
-.cta p{
-  color:rgba(255,255,255,0.72);
-  max-width:680px;
-  margin:0 auto 36px;
-}
-
-.button{
-  display:inline-block;
-  padding:16px 30px;
-  border-radius:12px;
-  background:var(--gold);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.2s ease;
-}
-
-.button:hover{
-  transform:translateY(-2px);
+.closing{
+  background:var(--sand);
 }
 
 footer{
-  padding:36px;
+  padding:36px 20px;
   text-align:center;
   color:var(--soft);
   background:var(--sand);
   font-size:14px;
 }
 
-a{
-  color:inherit;
-}
-
 @media(max-width:760px){
-
   .hero{
-    padding:80px 0 60px;
+    padding:70px 0 64px;
+    background:
+      linear-gradient(180deg, rgba(252,248,243,.96) 0%, rgba(252,248,243,.91) 54%, rgba(252,248,243,.82) 100%),
+      url("jenny-bulldozer.jpg");
+    background-size:cover;
+    background-position:center top;
   }
 
-  section{
-    padding:70px 0;
-  }
+  section{padding:68px 0}
 
-  .about{
-    grid-template-columns:1fr;
-  }
+  .about{grid-template-columns:1fr}
 
-  .package-button{
-    align-self:center;
-    text-align:center;
-  }
+  .buttons{flex-direction:column}
 
+  .button,.big-link{text-align:center}
+
+  .package-button{align-self:flex-start}
 }
-
 </style>
 </head>
 
 <body>
 
 <header class="hero">
-<div class="container">
+  <div class="container">
+    <div class="hero-inner">
 
-<p class="eyebrow">
-Copywriting für Neuro-Inklusion
-</p>
+      <h1>Du bist gut in dem, was du tust.</h1>
 
-<h1>
-Texte ohne Maske.<br>
-Ohne Druck.<br>
-Mit echter Verbindung.
-</h1>
+      <p class="hero-sub">
+        Aber deine Website klingt nach jemandem, den du gar nicht kennst.
+      </p>
 
-<p class="hero-sub">
-Authentisch statt manipulativ.
-</p>
+      <div class="hero-box">
+        <p>Es gibt diesen Moment, wenn du jemandem persönlich von deiner Arbeit erzählst und er sagt:</p>
 
-<div class="hero-text">
+        <p class="hero-quote">„Oh, das klingt interessant. Schick mir mal deinen Link.“</p>
 
-<p>
-Ich schreibe für Coaches, Mental-Health-Brands und neuroinklusive Unternehmen, die Menschen nicht überreden wollen — sondern wirklich erreichen möchten.
-</p>
+        <p>Und du denkst:</p>
 
-<p>
-Als hochsensible Mutter eines neurodivergenten Kindes kenne ich die Zwischenräume, in denen klassische Kommunikation oft scheitert.
-</p>
+        <p class="hero-quote">Bitte nicht.</p>
+      </div>
 
-<p>
-Für viele bedeutet Remote-Arbeit Freiheit.
-Für mich bedeutet sie: da sein können.
-Beim Meltdown. Bei Überforderung. Beim emotionalen Muskelkater.
-Halten – aushalten – bleiben.
-</p>
+      <p>Nicht, weil dein Angebot schlecht ist.</p>
+      <p>Sondern weil du weißt, dass deine Website nicht zeigt, was du eigentlich kannst.</p>
 
-<p>
-Genau diese Regulations-Kompetenz bringe ich heute in meine Texte ein.
-Denn Menschen fühlen, ob Kommunikation Druck macht —
-oder Sicherheit gibt.
-</p>
+      <p>Du schaffst es nicht, dein Wissen oder dein Können in Worte zu packen?</p>
+      <p>Deine Inhalte sind gut, aber sie bewirken nichts?</p>
+      <p>Wenn du deine Homepage selbst liest – was fühlst du?</p>
 
-</div>
+      <p>Wenn du diese Frage nicht beantworten kannst, stell dir Folgendes vor:</p>
 
-<div class="tags">
-<span class="tag">Neuro-Inklusion</span>
-<span class="tag">Mental Health</span>
-<span class="tag">Website Copy</span>
-<span class="tag">Storytelling</span>
-<span class="tag">LinkedIn & Instagram</span>
-<span class="tag">Asynchrone Zusammenarbeit</span>
-</div>
+      <p>Deine Kunden kommen zu dir, weil sie sich verstanden fühlen.</p>
+      <p>Du wirst kontaktiert, weil Menschen dir vertrauen.</p>
+      <p>Und genau da beginnt meine Arbeit.</p>
 
-</div>
+      <p>Ich finde die Worte, die die Menschen erreichen, die zu dir passen.</p>
+
+      <p>Wenn die Basis stimmt, kann man das Fundament bauen. Das sagte mein Vater immer.</p>
+
+      <p>Ich kann dir dabei helfen, deine Texte so wirken zu lassen, dass du glücklich damit bist, dich darin wiedererkennst und damit langfristig Beziehungen und Kunden aufbaust.</p>
+
+      <div class="buttons">
+        <a class="button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Website%20prüfen%20lassen">Website prüfen lassen</a>
+        <a class="button secondary" href="#angebote">Pakete ansehen</a>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Website Copy</span>
+        <span class="tag">Landingpages</span>
+        <span class="tag">Storytelling</span>
+        <span class="tag">LinkedIn & Instagram</span>
+        <span class="tag">Newsletter</span>
+        <span class="tag">Asynchrone Zusammenarbeit</span>
+      </div>
+
+    </div>
+  </div>
 </header>
 
 <section>
-<div class="container">
+  <div class="container">
+    <p class="section-label">Warum das passiert</p>
 
-<p class="section-label">
-Preise & Pakete
-</p>
+    <h2>Zwischen Wissen und Vertrauen liegt oft nur ein Text.</h2>
 
-<p style="color:var(--mid); margin-bottom:30px;">
-Transparente Richtwerte. Keine versteckten Kosten. Wenn du Fragen hast, klären wir alles vorab in Ruhe.
-</p>
+    <div class="text-block">
+      <p>Viele Unternehmer sind Experten in ihrem Bereich. Aber Experten schreiben selten für Menschen, die sie noch nicht kennen.</p>
 
-<div class="grid offer-grid">
+      <p>Sie schreiben für sich selbst. Oder für andere Experten. Und genau dort entsteht die Lücke zwischen Wissen und Vertrauen.</p>
 
-<div class="card">
-<h3>Neuro-Check (Audit)</h3>
-
-<p>
-Ich schaue mir deine Website oder Salespage an und gebe dir ruhiges, klares Feedback zu möglichen Hürden in der Kommunikation.
-</p>
-
-<p class="price">
-ab 250 €
-</p>
-
-<a class="package-button"
-href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Neuro-Check">
-Dieses Paket anfragen
-</a>
-
-</div>
-
-<div class="card">
-<h3>Neuro-inklusive Landingpage</h3>
-
-<p>
-Eine Verkaufsseite, die Orientierung gibt statt Druck zu erzeugen. Klar, menschlich und auf deine Zielgruppe abgestimmt.
-</p>
-
-<p class="price">
-ab 1.200 €
-</p>
-
-<a class="package-button"
-href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Stimme%20%26%20Strategie">
-Dieses Paket anfragen
-</a>
-
-</div>
-
-<div class="card">
-<h3>Content-Begleitung</h3>
-
-<p>
-Begleitung für LinkedIn oder Newsletter. Kontinuierlich, ohne Hektik, in einem verlässlichen Rhythmus.
-</p>
-
-<p class="price">
-ab 800 € / Monat
-</p>
-
-<a class="package-button"
-href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Langfristige%20Begleitung">
-Dieses Paket anfragen
-</a>
-
-</div>
-
-<div class="card">
-<h3>Individuelle Projekte</h3>
-
-<p>
-E-Mail-Strecken, Texte oder Skripte nach Bedarf. Alles wird vorher gemeinsam ruhig besprochen.
-</p>
-
-<p class="price">
-120 € / Stunde
-</p>
-
-</div>
-
-</div>
-
-<p style="color:var(--soft); margin-top:28px; font-size:14px;">
-Alle Preise zzgl. MwSt. (sofern anfallend). Erstkontakt ist immer unverbindlich.
-</p>
-
-</div>
+      <div class="highlight">
+        <p>Vielleicht liegt es gar nicht an deinem Angebot.</p>
+        <p>Vielleicht liegt es an den Worten.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-<div class="divider"></div>
-</div>
+<div class="container"><div class="divider"></div></div>
 
 <section>
-<div class="container">
+  <div class="container">
+    <p class="section-label">Worte als sicherer Ort</p>
 
-<p class="section-label">
-Arbeitsproben
-</p>
+    <h2>Menschen fühlen, ob Kommunikation Druck macht – oder Sicherheit gibt.</h2>
 
-<div class="sample">
+    <div class="text-block">
+      <p>Für viele bedeutet Remote-Arbeit Freiheit. Für mich bedeutet sie: da sein können.</p>
 
-<div class="sample-top">
-<span class="badge">LinkedIn</span>
-<span class="badge">Neurodiversität & HR</span>
-</div>
+      <p>Beim Meltdown. Bei Überforderung. Beim emotionalen Muskelkater.</p>
 
-<h2>
-Schubladen sind für Socken da, nicht für Menschen.
-</h2>
+      <p>Halten – aushalten – bleiben.</p>
 
-<p>
-In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken.
-Wir reden viel über Neurodiversität — aber hören wir den Menschen auch wirklich zu?
-</p>
-
-<p>
-Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt:
-Sie sehen die Welt durch eine völlig andere Linse.
-</p>
-
-<p>
-Wer bereit ist, Zukunft neu zu denken, wird belohnt.
-Denn neurodiverse Menschen erkennen Muster, Fehler und Chancen oft lange bevor andere sie sehen.
-</p>
-
-<div class="analysis">
-<strong>Warum dieser Text funktioniert</strong>
-
-Er verbindet emotionale Sprache mit Business-Relevanz.
-Kein belehrender Ton — sondern ein Perspektivwechsel, der im Kopf bleibt.
-</div>
-
-</div>
-
-<div class="sample">
-
-<div class="sample-top">
-<span class="badge">Instagram</span>
-<span class="badge">Mental Health & Elternschaft</span>
-</div>
-
-<h2>
-Es ist kein Trotz. Es ist ein brennendes Nervensystem.
-</h2>
-
-<p>
-Besonders bei neurodivergenten Kindern bewirkt Isolation oft genau das Gegenteil von dem, was wir eigentlich wollen.
-</p>
-
-<p>
-Unsere sensiblen Kinder brauchen nicht noch mehr Druck —
-sondern Co-Regulation.
-</p>
-
-<p>
-Manchmal ist es nur ein ruhiges Danebensitzen.
-Aber genau dort beginnt Sicherheit.
-</p>
-
-<div class="analysis">
-<strong>Warum dieser Text funktioniert</strong>
-
-Starker emotionaler Einstieg, klare Zielgruppenansprache und ein Ton, der Vertrauen statt Schuld erzeugt.
-</div>
-
-</div>
-
-</div>
+      <p>Genau diese Regulations-Kompetenz bringe ich heute in meine Texte ein. Denn Menschen fühlen, ob Kommunikation Druck macht — oder Sicherheit gibt.</p>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-<div class="divider"></div>
-</div>
-<div style="text-align:center;margin-top:40px;">
-  <a href="arbeitsproben.html" style="display:inline-block;background:#6B7D52;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-size:15px;font-weight:500;">
-    Arbeitsproben ansehen →
-  </a>
-</div>
+<div class="container"><div class="divider"></div></div>
+
+<section id="angebote">
+  <div class="container">
+    <p class="section-label">Preise & Pakete</p>
+
+    <p style="color:var(--mid); margin-bottom:30px;">
+      Transparente Richtwerte. Keine versteckten Kosten. Wenn du Fragen hast, klären wir alles vorab in Ruhe.
+    </p>
+
+    <div class="grid offer-grid">
+
+      <div class="card">
+        <div>
+          <h3>Kommunikations-Check</h3>
+          <p>Viele Unternehmer merken gar nicht, wo ihre Kommunikation Druck erzeugt.</p>
+          <p>Ich schaue mir deine Website oder Salespage an und gebe dir ruhiges, klares Feedback zu möglichen Hürden in der Kommunikation.</p>
+          <p class="price">ab 250 €</p>
+        </div>
+        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Kommunikations-Check">Dieses Paket anfragen</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Landingpage</h3>
+          <p>Menschen springen selten wegen eines schlechten Angebots ab. Oft gehen sie, weil sie sich nicht verstanden fühlen.</p>
+          <p>Eine Verkaufsseite, die Orientierung gibt statt Druck zu erzeugen. Klar, menschlich und auf deine Zielgruppe abgestimmt.</p>
+          <p class="price">ab 1.200 €</p>
+        </div>
+        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Landingpage">Dieses Paket anfragen</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Content-Begleitung</h3>
+          <p>Begleitung für LinkedIn oder Newsletter. Kontinuierlich, ohne Hektik, in einem verlässlichen Rhythmus.</p>
+          <p class="price">ab 800 € / Monat</p>
+        </div>
+        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Content-Begleitung">Dieses Paket anfragen</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Individuelle Projekte</h3>
+          <p>E-Mail-Strecken, Texte oder Skripte nach Bedarf. Alles wird vorher gemeinsam ruhig besprochen.</p>
+          <p class="price">120 € / Stunde</p>
+        </div>
+        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Individuelles%20Projekt">Dieses Paket anfragen</a>
+      </div>
+
+    </div>
+
+    <p style="color:var(--soft); margin-top:28px; font-size:14px;">
+      Alle Preise zzgl. MwSt. (sofern anfallend). Erstkontakt ist immer unverbindlich.
+    </p>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
 <section>
-<div class="container">
+  <div class="container">
+    <p class="section-label">Arbeitsproben</p>
 
-<p class="section-label">
-Über mich
-</p>
+    <div class="sample">
+      <div class="badges">
+        <span class="badge">LinkedIn</span>
+        <span class="badge">Neurodiversität & HR</span>
+      </div>
 
-<div class="about">
+      <h3>Schubladen sind für Socken da, nicht für Menschen.</h3>
 
-<div>
+      <p>In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken. Wir reden viel über Neurodiversität — aber hören wir den Menschen auch wirklich zu?</p>
 
-<h2>
-Die neue Jennifer.
-</h2>
+      <p>Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt: Sie sehen die Welt durch eine völlig andere Linse.</p>
 
-<p>
-Ich bin Jennifer —
-Quereinsteigerin, Löwenmama und Copywriterin für Neuro-Inklusion.
-</p>
+      <p>Wer bereit ist, Zukunft neu zu denken, wird belohnt. Denn neurodiverse Menschen erkennen Muster, Fehler und Chancen oft lange bevor andere sie sehen.</p>
 
-<p>
-Ich glaube nicht an manipulative Marketing-Tricks.
-Ich glaube an Texte, die sich nach Menschen anfühlen.
-</p>
+      <div class="analysis">
+        <strong>Warum dieser Text funktioniert</strong><br>
+        Er verbindet emotionale Sprache mit Business-Relevanz. Kein belehrender Ton — sondern ein Perspektivwechsel, der im Kopf bleibt.
+      </div>
+    </div>
 
-<p>
-Nicht perfekt.
-Nicht laut.
-Aber ehrlich.
-</p>
+    <div class="sample">
+      <div class="badges">
+        <span class="badge">Instagram</span>
+        <span class="badge">Mental Health & Elternschaft</span>
+      </div>
 
-<p>
-Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Nische für mich —
-sondern gelebte Realität.
-</p>
+      <h3>Es ist kein Trotz. Es ist ein brennendes Nervensystem.</h3>
 
-<p>
-Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.
-</p>
+      <p>Besonders bei neurodivergenten Kindern bewirkt Isolation oft genau das Gegenteil von dem, was wir eigentlich wollen.</p>
 
-</div>
+      <p>Unsere sensiblen Kinder brauchen nicht noch mehr Druck — sondern Co-Regulation.</p>
 
-<div>
+      <p>Manchmal ist es nur ein ruhiges Danebensitzen. Aber genau dort beginnt Sicherheit.</p>
 
-<img src="Screenshot_20260514_082439_Gallery.jpg" alt="Jennifer Bleichert">
+      <div class="analysis">
+        <strong>Warum dieser Text funktioniert</strong><br>
+        Starker emotionaler Einstieg, klare Zielgruppenansprache und ein Ton, der Vertrauen statt Schuld erzeugt.
+      </div>
+    </div>
 
-<div class="points">
-
-<div class="point">
-<div class="dot"></div>
-<div>
-<strong>Empathie als Stärke</strong>
-Texte aus dem Innenleben der Zielgruppe heraus.
-</div>
-</div>
-
-<div class="point">
-<div class="dot"></div>
-<div>
-<strong>Kommunikation auf Augenhöhe</strong>
-Keine künstliche Verknappung. Kein Verkaufsdruck.
-</div>
-</div>
-
-<div class="point">
-<div class="dot"></div>
-<div>
-<strong>Neuroinklusive Sprache</strong>
-Weniger Reiz. Mehr Sicherheit.
-</div>
-</div>
-
-<div class="point">
-<div class="dot"></div>
-<div>
-<strong>Asynchron & ruhig</strong>
-Zusammenarbeit ohne Dauer-Erreichbarkeit.
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="arbeitsproben.html" class="big-link">Einblicke in meine Arbeit →</a>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
+<div class="container"><div class="divider"></div></div>
 
-<div class="container">
+<section>
+  <div class="container">
+    <p class="section-label">Über mich</p>
 
-<p class="eyebrow">
-Zusammenarbeit
-</p>
+    <div class="about">
+      <div>
+        <h2>Die Frau hinter den Worten</h2>
 
-<h2>
-Lass uns schauen,<br>
-ob die Chemie stimmt.
-</h2>
+        <p>Ich bin Jennifer.</p>
 
-<p>
-Ganz ohne Druck.
-Ganz in deinem Tempo.
-</p>
+        <p>Hochsensibel. Mutter eines neurodivergenten Kindes. Quereinsteigerin. Und jemand, der jahrelang lernen musste, zwischen den Zeilen zu lesen.</p>
 
-<a class="button" href="mailto:Jennifer.Bleichert@t-online.de">
-Nachricht schreiben
-</a>
+        <p>Ich glaube nicht an manipulative Marketing-Tricks. Ich glaube an Texte, die sich nach Menschen anfühlen.</p>
 
-</div>
+        <p>Nicht perfekt. Nicht laut. Aber ehrlich.</p>
 
+        <p>Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Zielgruppen-Idee — sondern gelebte Realität.</p>
+
+        <p>Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.</p>
+      </div>
+
+      <div>
+        <img src="jenny-bulldozer.jpg" alt="Jennifer Bleichert mit Bulldozer am Strand">
+
+        <div class="points">
+          <div class="point">
+            <div class="dot"></div>
+            <div>
+              <strong>Empathie als Stärke</strong>
+              Texte aus dem Innenleben der Zielgruppe heraus.
+            </div>
+          </div>
+
+          <div class="point">
+            <div class="dot"></div>
+            <div>
+              <strong>Kommunikation auf Augenhöhe</strong>
+              Keine künstliche Verknappung. Kein Verkaufsdruck.
+            </div>
+          </div>
+
+          <div class="point">
+            <div class="dot"></div>
+            <div>
+              <strong>Sprache, die entlastet</strong>
+              Weniger Reiz. Mehr Sicherheit.
+            </div>
+          </div>
+
+          <div class="point">
+            <div class="dot"></div>
+            <div>
+              <strong>Asynchron & ruhig</strong>
+              Zusammenarbeit ohne Dauer-Erreichbarkeit.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container">
+    <h2>Vielleicht liegt es gar nicht an deinem Angebot.</h2>
+
+    <div class="text-block">
+      <p>Vielleicht liegt es an den Worten.</p>
+
+      <p>Wenn du das Gefühl hast, dass deine Texte nicht zeigen, was du eigentlich kannst, dann schreib mir.</p>
+
+      <p>Ganz ohne Druck. Ganz in deinem Tempo.</p>
+
+      <a class="button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Copywriting">Nachricht schreiben</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Jennifer Bleichert · Copywriting für Neuro-Inklusion · 100 % Remote
+© 2026 Jennifer Bleichert · Copywriting · Websites · Landingpages · Content · 100 % Remote
 </footer>
 
 </body>
