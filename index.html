@@ -212,15 +212,25 @@ section{
   align-self:flex-start;
 }
 
-.sample{
-  padding-bottom:48px;
-  margin-bottom:48px;
-  border-bottom:1px solid var(--line);
+.sample-intro{
+  margin-bottom:34px;
 }
 
-.sample:last-child{
-  border-bottom:none;
-  margin-bottom:0;
+.samples-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.sample-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:34px;
+}
+
+.sample-card p{
+  color:var(--mid);
 }
 
 .badges{
@@ -236,19 +246,6 @@ section{
   background:var(--sand);
   color:var(--mid);
   font-size:13px;
-}
-
-.sample h3{
-  font-size:clamp(28px,5vw,40px);
-}
-
-.analysis{
-  margin-top:24px;
-  padding:22px;
-  background:var(--sand);
-  border-left:3px solid var(--gold);
-  border-radius:0 16px 16px 0;
-  color:var(--mid);
 }
 
 .about{
@@ -492,51 +489,74 @@ footer{
 
 <section>
   <div class="container">
+
     <p class="section-label">Arbeitsproben</p>
 
-    <div class="sample">
-      <div class="badges">
-        <span class="badge">LinkedIn</span>
-        <span class="badge">Neurodiversität & HR</span>
-      </div>
+    <h2>Nicht jeder möchte sofort Kontakt aufnehmen.</h2>
 
-      <h3>Schubladen sind für Socken da, nicht für Menschen.</h3>
+    <div class="text-block sample-intro">
+      <p>Manche lesen erst. Manche spüren erst.</p>
 
-      <p>In einer Welt voller Socken-Schubladen ist es nicht immer einfach, querzudenken. Wir reden viel über Neurodiversität — aber hören wir den Menschen auch wirklich zu?</p>
-
-      <p>Neurodivergente Köpfe tun genau das, was vielen Unternehmen heute fehlt: Sie sehen die Welt durch eine völlig andere Linse.</p>
-
-      <p>Wer bereit ist, Zukunft neu zu denken, wird belohnt. Denn neurodiverse Menschen erkennen Muster, Fehler und Chancen oft lange bevor andere sie sehen.</p>
-
-      <div class="analysis">
-        <strong>Warum dieser Text funktioniert</strong><br>
-        Er verbindet emotionale Sprache mit Business-Relevanz. Kein belehrender Ton — sondern ein Perspektivwechsel, der im Kopf bleibt.
-      </div>
+      <p>Deshalb findest du hier ausgewählte Arbeitsproben aus den Bereichen Landingpages, Social Media, Storytelling und Elternkommunikation.</p>
     </div>
 
-    <div class="sample">
-      <div class="badges">
-        <span class="badge">Instagram</span>
-        <span class="badge">Mental Health & Elternschaft</span>
+    <div class="samples-grid">
+
+      <div class="sample-card">
+        <div class="badges">
+          <span class="badge">Lead Magnet</span>
+          <span class="badge">PDA · Eltern</span>
+        </div>
+
+        <h3>Vom Kampf zum Verstehen</h3>
+
+        <p>„Du musst nur konsequenter sein.“</p>
+
+        <p>Wie oft hast du diesen Satz schon gehört und dich dabei völlig allein gelassen gefühlt?</p>
+
+        <p>Was viele als Trotz sehen, ist oft ein Nervensystem im Alarmmodus.</p>
+
+        <a class="package-button" href="arbeitsproben.html#pda">Mehr lesen →</a>
       </div>
 
-      <h3>Es ist kein Trotz. Es ist ein brennendes Nervensystem.</h3>
+      <div class="sample-card">
+        <div class="badges">
+          <span class="badge">Landingpage</span>
+          <span class="badge">Coaching</span>
+        </div>
 
-      <p>Besonders bei neurodivergenten Kindern bewirkt Isolation oft genau das Gegenteil von dem, was wir eigentlich wollen.</p>
+        <h3>Raus aus der Verzweiflung</h3>
 
-      <p>Unsere sensiblen Kinder brauchen nicht noch mehr Druck — sondern Co-Regulation.</p>
+        <p>Dein Kind bringt dich an deine Grenzen.</p>
 
-      <p>Manchmal ist es nur ein ruhiges Danebensitzen. Aber genau dort beginnt Sicherheit.</p>
+        <p>Und niemand glaubt dir.</p>
 
-      <div class="analysis">
-        <strong>Warum dieser Text funktioniert</strong><br>
-        Starker emotionaler Einstieg, klare Zielgruppenansprache und ein Ton, der Vertrauen statt Schuld erzeugt.
+        <p>Eine Landingpage für Eltern, die endlich verstanden werden möchten.</p>
+
+        <a class="package-button" href="arbeitsproben.html#landingpage">Mehr lesen →</a>
       </div>
+
+      <div class="sample-card">
+        <div class="badges">
+          <span class="badge">Instagram Post</span>
+          <span class="badge">Elternschaft</span>
+        </div>
+
+        <h3>Du wirst gesehen.</h3>
+
+        <p>Beim Einkaufen die Blicke der anderen zu spüren, während du einfach nur versuchst Mama zu sein.</p>
+
+        <p>Ein kurzer Text über Scham, Stärke und Zusammenhalt.</p>
+
+        <a class="package-button" href="arbeitsproben.html#instagram">Mehr lesen →</a>
+      </div>
+
     </div>
 
-    <div style="text-align:center;margin-top:40px;">
-      <a href="arbeitsproben.html" class="big-link">Einblicke in meine Arbeit →</a>
+    <div style="text-align:center;margin-top:50px;">
+      <a href="arbeitsproben.html" class="big-link">Alle Arbeitsproben ansehen →</a>
     </div>
+
   </div>
 </section>
 
