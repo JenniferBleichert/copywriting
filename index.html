@@ -1,649 +1,746 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jennifer Bleichert – Copywriting</title>
-<meta name="description" content="Website-Texte, Landingpages und Content, die Vertrauen aufbauen statt Druck erzeugen. Copywriting von Jennifer Bleichert.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jennifer Bleichert | Texte, die sich nach Menschen anfühlen</title>
 
-<style>
-:root{
-  --bg:#FCF8F3;
-  --sand:#F3ECE2;
-  --card:#F8F1E8;
-  --text:#2D2A27;
-  --mid:#5E5A55;
-  --soft:#8A8177;
-  --gold:#B78A5C;
-  --olive:#6F7B65;
-  --line:#E4DBCF;
-  --dark:#2F2C29;
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap');
 
-*{box-sizing:border-box;margin:0;padding:0}
+    :root {
+      --sand: #F7F1E8;
+      --cream: #EDE4D6;
+      --white: #FFFDF8;
+      --text: #2F2926;
+      --magenta: #B24B7A;
+      --magenta-dark: #8E3B60;
+      --yellow: #E5D84A;
+      --shadow: 0 18px 45px rgba(47, 41, 38, 0.08);
+      --soft-shadow: 0 10px 28px rgba(47, 41, 38, 0.06);
+      --radius: 28px;
+      --radius-small: 18px;
+      --max: 1120px;
+    }
 
-html{scroll-behavior:smooth}
+    * {
+      box-sizing: border-box;
+    }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter, Arial, sans-serif;
-  line-height:1.85;
-  font-size:16px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.container{
-  width:min(920px,92%);
-  margin:auto;
-}
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(178, 75, 122, 0.10) 0%, transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(229, 216, 74, 0.16) 0%, transparent 24%),
+        linear-gradient(180deg, var(--sand) 0%, var(--white) 48%, var(--cream) 100%);
+      line-height: 1.7;
+      font-size: 17px;
+    }
 
-h1,h2,h3{
-  font-family:Georgia, "Times New Roman", serif;
-  font-weight:500;
-  line-height:1.12;
-  color:var(--text);
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-h1{
-  font-size:clamp(42px,9vw,76px);
-  margin-bottom:22px;
-}
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-h2{
-  font-size:clamp(32px,6vw,54px);
-  margin-bottom:24px;
-}
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-h3{
-  font-size:26px;
-  margin-bottom:16px;
-}
+    section {
+      padding: 86px 0;
+    }
 
-p{margin-bottom:18px}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--magenta-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
 
-.hero{
-  position:relative;
-  padding:110px 0 90px;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg, rgba(252,248,243,.97) 0%, rgba(252,248,243,.92) 46%, rgba(252,248,243,.55) 100%),
-    linear-gradient(180deg, rgba(243,236,226,.08), rgba(243,236,226,.94)),
-    url("jenny-bulldozer.jpg");
-  background-size:cover;
-  background-position:center 38%;
-}
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--yellow);
+      border-radius: 999px;
+    }
 
-.hero-inner{
-  max-width:760px;
-  position:relative;
-  z-index:2;
-}
+    h1, h2, h3 {
+      font-family: "Lora", Georgia, serif;
+      color: var(--text);
+      line-height: 1.14;
+      margin: 0;
+      font-weight: 700;
+    }
 
-.hero-sub{
-  font-family:Georgia, "Times New Roman", serif;
-  color:var(--olive);
-  font-size:clamp(20px,4vw,30px);
-  line-height:1.35;
-  margin-bottom:34px;
-}
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5.1rem);
+      max-width: 940px;
+      margin: 0 auto 26px;
+      letter-spacing: -0.04em;
+    }
 
-.hero-box{
-  margin:34px 0;
-  padding:28px;
-  background:rgba(255,255,255,.66);
-  border:1px solid var(--line);
-  border-radius:24px;
-}
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
 
-.hero-quote{
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:clamp(24px,5vw,40px);
-  color:var(--olive);
-  line-height:1.25;
-  margin:18px 0;
-}
+    h3 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:34px;
-}
+    p {
+      margin: 0 0 18px;
+    }
 
-.button,.package-button,.big-link{
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:12px;
-  background:var(--gold);
-  color:white;
-  text-decoration:none;
-  font-weight:650;
-}
+    .lead {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(47, 41, 38, 0.84);
+    }
 
-.button.secondary{
-  background:transparent;
-  color:var(--olive);
-  border:1px solid var(--olive);
-}
+    .hero {
+      padding: 112px 0 84px;
+      text-align: center;
+      position: relative;
+    }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:38px;
-}
+    .hero-subline {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: clamp(1.12rem, 2.3vw, 1.55rem);
+      color: rgba(47, 41, 38, 0.82);
+      line-height: 1.55;
+    }
 
-.tag{
-  padding:10px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,.7);
-  border:1px solid var(--line);
-  color:var(--mid);
-  font-size:14px;
-}
+    .hero-box {
+      max-width: 760px;
+      margin: 34px auto 34px;
+      padding: 30px;
+      background: rgba(255, 253, 248, 0.82);
+      border: 1px solid rgba(178, 75, 122, 0.16);
+      border-radius: var(--radius);
+      box-shadow: var(--soft-shadow);
+      text-align: left;
+    }
 
-section{
-  padding:88px 0;
-}
+    .hero-box p {
+      font-size: 1.08rem;
+      margin-bottom: 0;
+    }
 
-.section-label{
-  text-transform:uppercase;
-  letter-spacing:3px;
-  color:var(--soft);
-  font-size:12px;
-  margin-bottom:42px;
-  font-weight:700;
-}
+    .hero-box strong {
+      color: var(--magenta-dark);
+      font-weight: 700;
+    }
 
-.text-block{
-  max-width:760px;
-  color:var(--mid);
-}
+    .button-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
 
-.highlight{
-  margin-top:28px;
-  padding:26px;
-  background:var(--sand);
-  border-left:4px solid var(--gold);
-  border-radius:0 18px 18px 0;
-  font-weight:600;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
 
-.divider{
-  height:1px;
-  background:var(--line);
-}
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-.grid{
-  display:grid;
-  gap:28px;
-}
+    .btn-primary {
+      background: var(--magenta);
+      color: var(--white);
+      box-shadow: 0 12px 24px rgba(178, 75, 122, 0.22);
+    }
 
-.offer-grid{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
+    .btn-primary:hover {
+      background: var(--magenta-dark);
+    }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:34px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
+    .btn-secondary {
+      color: var(--magenta-dark);
+      border: 1px solid rgba(142, 59, 96, 0.32);
+      background: rgba(255, 253, 248, 0.62);
+    }
 
-.card p{
-  color:var(--mid);
-}
+    .intro-section {
+      padding-top: 72px;
+    }
 
-.price{
-  color:var(--gold);
-  font-size:24px;
-  font-weight:700;
-  margin-top:8px;
-}
+    .text-block {
+      max-width: 820px;
+    }
 
-.package-button{
-  margin-top:20px;
-  background:transparent;
-  border:1px solid var(--olive);
-  color:var(--olive);
-  align-self:flex-start;
-}
+    .text-block.center {
+      margin: 0 auto;
+      text-align: center;
+    }
 
-.sample-intro{
-  margin-bottom:34px;
-}
+    .highlight-lines {
+      max-width: 850px;
+      margin: 32px auto;
+      display: grid;
+      gap: 14px;
+    }
 
-.samples-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
+    .highlight-line {
+      padding: 22px 24px;
+      background: rgba(178, 75, 122, 0.10);
+      border: 1px solid rgba(178, 75, 122, 0.18);
+      border-radius: 22px;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+      font-weight: 700;
+      color: var(--magenta-dark);
+      box-shadow: var(--soft-shadow);
+    }
 
-.sample-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:34px;
-}
+    .cta-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 34px 0 26px;
+    }
 
-.sample-card p{
-  color:var(--mid);
-}
+    .mini-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 34px auto 34px;
+      max-width: 860px;
+    }
 
-.badges{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-bottom:18px;
-}
+    .tag {
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid rgba(142, 59, 96, 0.18);
+      box-shadow: 0 8px 18px rgba(47, 41, 38, 0.04);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(47, 41, 38, 0.86);
+    }
 
-.badge{
-  padding:7px 14px;
-  border-radius:999px;
-  background:var(--sand);
-  color:var(--mid);
-  font-size:13px;
-}
+    .framed-note {
+      max-width: 860px;
+      margin: 38px auto;
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(142, 59, 96, 0.24);
+      background: rgba(255, 253, 248, 0.58);
+    }
 
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:56px;
-  align-items:start;
-}
+    .framed-note p:last-child {
+      margin-bottom: 0;
+    }
 
-.about img{
-  width:100%;
-  max-width:430px;
-  aspect-ratio:4/5;
-  object-fit:cover;
-  object-position:center;
-  border-radius:26px;
-  border:4px solid var(--line);
-  box-shadow:0 18px 45px rgba(45,45,45,.10);
-}
+    .offer-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 38px;
+    }
 
-.points{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-  margin-top:28px;
-}
+    .offer-card {
+      padding: 34px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-height: 250px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.point{
-  display:flex;
-  gap:14px;
-  color:var(--mid);
-}
+    .offer-card::after {
+      content: "";
+      position: absolute;
+      right: -46px;
+      bottom: -46px;
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      background: rgba(229, 216, 74, 0.32);
+    }
 
-.dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:var(--gold);
-  margin-top:12px;
-  flex-shrink:0;
-}
+    .offer-card.business {
+      background: linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(178, 75, 122, 0.12));
+      border: 1px solid rgba(178, 75, 122, 0.16);
+    }
 
-.point strong{
-  display:block;
-  color:var(--text);
-  margin-bottom:4px;
-}
+    .offer-card.moments {
+      background: linear-gradient(145deg, rgba(255, 253, 248, 0.98), rgba(229, 216, 74, 0.16));
+      border: 1px solid rgba(142, 59, 96, 0.13);
+    }
 
-.closing{
-  background:var(--sand);
-}
+    .content-section {
+      background: rgba(255, 253, 248, 0.48);
+    }
 
-footer{
-  padding:36px 20px;
-  text-align:center;
-  color:var(--soft);
-  background:var(--sand);
-  font-size:14px;
-}
+    .split {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 52px;
+      align-items: start;
+    }
 
-@media(max-width:760px){
-  .hero{
-    padding:70px 0 64px;
-    background:
-      linear-gradient(180deg, rgba(252,248,243,.96) 0%, rgba(252,248,243,.91) 54%, rgba(252,248,243,.82) 100%),
-      url("jenny-bulldozer.jpg");
-    background-size:cover;
-    background-position:center top;
-  }
+    .side-label {
+      position: sticky;
+      top: 22px;
+      padding: 26px;
+      background: rgba(255, 253, 248, 0.72);
+      border-radius: var(--radius);
+      border: 1px solid rgba(178, 75, 122, 0.14);
+      box-shadow: var(--soft-shadow);
+    }
 
-  section{padding:68px 0}
+    .side-label p {
+      margin-bottom: 0;
+      color: rgba(47, 41, 38, 0.76);
+    }
 
-  .about{grid-template-columns:1fr}
+    .paragraph-card {
+      padding: 36px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(47, 41, 38, 0.04);
+    }
 
-  .buttons{flex-direction:column}
+    .paragraph-card p:last-child {
+      margin-bottom: 0;
+    }
 
-  .button,.big-link{text-align:center}
+    .process-wrap {
+      max-width: 900px;
+      margin: 36px auto 0;
+      display: grid;
+      gap: 18px;
+    }
 
-  .package-button{align-self:flex-start}
-}
-</style>
+    .process-box {
+      padding: 26px 28px;
+      border-radius: 24px;
+      background: rgba(255, 253, 248, 0.78);
+      border: 1px solid rgba(142, 59, 96, 0.13);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .process-box h3 {
+      color: var(--magenta-dark);
+      font-size: 1.35rem;
+    }
+
+    .process-box p {
+      margin-bottom: 0;
+    }
+
+    .about {
+      padding-bottom: 70px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 46px;
+      align-items: center;
+    }
+
+    .photo-placeholder {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 10px solid rgba(255, 253, 248, 0.78);
+      background: var(--cream);
+    }
+
+    .about-text {
+      padding: 38px;
+      border-radius: var(--radius);
+      background: rgba(255, 253, 248, 0.70);
+      border: 1px solid rgba(178, 75, 122, 0.12);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .quote {
+      margin-top: 28px;
+      padding: 24px 26px;
+      border-left: 5px solid var(--magenta);
+      border-radius: 18px;
+      background: rgba(178, 75, 122, 0.08);
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      color: var(--magenta-dark);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 54px 0 30px;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(1.55rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+
+    .final-cta a {
+      color: var(--magenta-dark);
+      font-weight: 700;
+      border-bottom: 2px solid rgba(229, 216, 74, 0.85);
+    }
+
+    footer {
+      padding: 38px 0 52px;
+      font-size: 0.92rem;
+      color: rgba(47, 41, 38, 0.72);
+    }
+
+    .footer-inner {
+      border-top: 1px solid rgba(47, 41, 38, 0.12);
+      padding-top: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .footer-inner strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      body {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .hero {
+        padding: 86px 0 62px;
+      }
+
+      .offer-cards,
+      .split,
+      .about-grid,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .side-label {
+        position: static;
+      }
+
+      .about-text,
+      .paragraph-card,
+      .offer-card,
+      .hero-box,
+      .framed-note {
+        padding: 26px;
+      }
+
+      .photo-placeholder {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .hero {
+        padding: 70px 0 50px;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.28rem;
+      }
+
+      .hero-subline {
+        font-size: 1.05rem;
+      }
+
+      .hero-box,
+      .about-text,
+      .paragraph-card,
+      .offer-card,
+      .framed-note,
+      .process-box {
+        border-radius: 20px;
+        padding: 22px;
+      }
+
+      .button-row,
+      .cta-strip {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 46px;
+        font-size: 0.94rem;
+        padding: 12px 18px;
+      }
+
+      .tag {
+        font-size: 0.88rem;
+        padding: 8px 12px;
+      }
+
+      .highlight-line {
+        padding: 18px;
+      }
+
+      .offer-card {
+        min-height: unset;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Texte für Menschen</span>
+        <h1>Du bist gut in dem, was du tust.</h1>
 
-<header class="hero">
-  <div class="container">
-    <div class="hero-inner">
+        <p class="hero-subline">
+          Aber deine Website klingt nach einer Person, die du gar nicht kennst.
+        </p>
 
-      <h1>Du bist gut in dem, was du tust.</h1>
-
-      <p class="hero-sub">
-        Aber deine Website klingt nach jemandem, den du gar nicht kennst.
-      </p>
-
-      <div class="hero-box">
-        <p>Es gibt diesen Moment, wenn du jemandem persönlich von deiner Arbeit erzählst und er sagt:</p>
-
-        <p class="hero-quote">„Oh, das klingt interessant. Schick mir mal deinen Link.“</p>
-
-        <p>Und du denkst:</p>
-
-        <p class="hero-quote">Bitte nicht.</p>
-      </div>
-
-      <p>Nicht, weil dein Angebot schlecht ist.</p>
-      <p>Sondern weil du weißt, dass deine Website nicht zeigt, was du eigentlich kannst.</p>
-
-      <p>Du schaffst es nicht, dein Wissen oder dein Können in Worte zu packen?</p>
-      <p>Deine Inhalte sind gut, aber sie bewirken nichts?</p>
-      <p>Wenn du deine Homepage selbst liest – was fühlst du?</p>
-
-      <p>Wenn du diese Frage nicht beantworten kannst, stell dir Folgendes vor:</p>
-
-      <p>Deine Kunden kommen zu dir, weil sie sich verstanden fühlen.</p>
-      <p>Du wirst kontaktiert, weil Menschen dir vertrauen.</p>
-      <p>Und genau da beginnt meine Arbeit.</p>
-
-      <p>Ich finde die Worte, die die Menschen erreichen, die zu dir passen.</p>
-
-      <p>Wenn die Basis stimmt, kann man das Fundament bauen. Das sagte mein Vater immer.</p>
-
-      <p>Ich kann dir dabei helfen, deine Texte so wirken zu lassen, dass du glücklich damit bist, dich darin wiedererkennst und damit langfristig Beziehungen und Kunden aufbaust.</p>
-
-      <div class="buttons">
-        <a class="button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Website%20prüfen%20lassen">Website prüfen lassen</a>
-        <a class="button secondary" href="#angebote">Pakete ansehen</a>
-      </div>
-
-      <div class="tags">
-        <span class="tag">Website Copy</span>
-        <span class="tag">Landingpages</span>
-        <span class="tag">Storytelling</span>
-        <span class="tag">LinkedIn & Instagram</span>
-        <span class="tag">Newsletter</span>
-        <span class="tag">Asynchrone Zusammenarbeit</span>
-      </div>
-
-    </div>
-  </div>
-</header>
-
-<section>
-  <div class="container">
-    <p class="section-label">Warum das passiert</p>
-
-    <h2>Zwischen Wissen und Vertrauen liegt oft nur ein Text.</h2>
-
-    <div class="text-block">
-      <p>Viele Unternehmer sind Experten in ihrem Bereich. Aber Experten schreiben selten für Menschen, die sie noch nicht kennen.</p>
-
-      <p>Sie schreiben für sich selbst. Oder für andere Experten. Und genau dort entsteht die Lücke zwischen Wissen und Vertrauen.</p>
-
-      <div class="highlight">
-        <p>Vielleicht liegt es gar nicht an deinem Angebot.</p>
-        <p>Vielleicht liegt es an den Worten.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
-
-<section>
-  <div class="container">
-    <p class="section-label">Worte als sicherer Ort</p>
-
-    <h2>Menschen fühlen, ob Kommunikation Druck macht – oder Sicherheit gibt.</h2>
-
-    <div class="text-block">
-      <p>Für viele bedeutet Remote-Arbeit Freiheit. Für mich bedeutet sie: da sein können.</p>
-
-      <p>Beim Meltdown. Bei Überforderung. Beim emotionalen Muskelkater.</p>
-
-      <p>Halten – aushalten – bleiben.</p>
-
-      <p>Genau diese Regulations-Kompetenz bringe ich heute in meine Texte ein. Denn Menschen fühlen, ob Kommunikation Druck macht — oder Sicherheit gibt.</p>
-    </div>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
-
-<section id="angebote">
-  <div class="container">
-    <p class="section-label">Preise & Pakete</p>
-
-    <p style="color:var(--mid); margin-bottom:30px;">
-      Transparente Richtwerte. Keine versteckten Kosten. Wenn du Fragen hast, klären wir alles vorab in Ruhe.
-    </p>
-
-    <div class="grid offer-grid">
-
-      <div class="card">
-        <div>
-          <h3>Kommunikations-Check</h3>
-          <p>Viele Unternehmer merken gar nicht, wo ihre Kommunikation Druck erzeugt.</p>
-          <p>Ich schaue mir deine Website oder Salespage an und gebe dir ruhiges, klares Feedback zu möglichen Hürden in der Kommunikation.</p>
-          <p class="price">ab 250 €</p>
-        </div>
-        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Kommunikations-Check">Dieses Paket anfragen</a>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Landingpage</h3>
-          <p>Menschen springen selten wegen eines schlechten Angebots ab. Oft gehen sie, weil sie sich nicht verstanden fühlen.</p>
-          <p>Eine Verkaufsseite, die Orientierung gibt statt Druck zu erzeugen. Klar, menschlich und auf deine Zielgruppe abgestimmt.</p>
-          <p class="price">ab 1.200 €</p>
-        </div>
-        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Landingpage">Dieses Paket anfragen</a>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Content-Begleitung</h3>
-          <p>Begleitung für LinkedIn oder Newsletter. Kontinuierlich, ohne Hektik, in einem verlässlichen Rhythmus.</p>
-          <p class="price">ab 800 € / Monat</p>
-        </div>
-        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Content-Begleitung">Dieses Paket anfragen</a>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>Individuelle Projekte</h3>
-          <p>E-Mail-Strecken, Texte oder Skripte nach Bedarf. Alles wird vorher gemeinsam ruhig besprochen.</p>
-          <p class="price">120 € / Stunde</p>
-        </div>
-        <a class="package-button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Individuelles%20Projekt">Dieses Paket anfragen</a>
-      </div>
-
-    </div>
-
-    <p style="color:var(--soft); margin-top:28px; font-size:14px;">
-      Alle Preise zzgl. MwSt. (sofern anfallend). Erstkontakt ist immer unverbindlich.
-    </p>
-  </div>
-</section>
-
-<div class="container"><div class="divider"></div></div>
-
-<section>
-  <div class="container">
-
-    <p class="section-label">Arbeitsproben</p>
-
-    <h2>Nicht jeder möchte sofort Kontakt aufnehmen.</h2>
-
-    <div class="text-block sample-intro">
-      <p>Manche lesen erst. Manche spüren erst.</p>
-
-      <p>Deshalb findest du hier ausgewählte Arbeitsproben aus den Bereichen Landingpages, Social Media, Storytelling und Elternkommunikation.</p>
-    </div>
-
-    <div class="samples-grid">
-
-      <div class="sample-card">
-        <div class="badges">
-          <span class="badge">Lead Magnet</span>
-          <span class="badge">PDA · Eltern</span>
+        <div class="hero-box">
+          <p>
+            Es gibt diesen Moment, in dem du persönlich von deiner Arbeit erzählst und dein Gegenüber sagt:
+            <br><strong>„Oh, das klingt interessant. Schick mir mal deinen Link.“</strong>
+            <br><br>
+            Und du denkst:
+            <br><strong>Bitte nicht.</strong>
+          </p>
         </div>
 
-        <h3>Vom Kampf zum Verstehen</h3>
-
-        <p>„Du musst nur konsequenter sein.“</p>
-
-        <p>Wie oft hast du diesen Satz schon gehört und dich dabei völlig allein gelassen gefühlt?</p>
-
-        <p>Was viele als Trotz sehen, ist oft ein Nervensystem im Alarmmodus.</p>
-
-        <a class="package-button" href="arbeitsproben.html#pda">Mehr lesen →</a>
+        <div class="button-row">
+          <a class="btn btn-primary" href="mailto:Jennifer.Bleichert@t-online.de">Hier lang zum Erstkontakt</a>
+          <a class="btn btn-secondary" href="#angebote">Was hier möglich ist</a>
+        </div>
       </div>
+    </section>
 
-      <div class="sample-card">
-        <div class="badges">
-          <span class="badge">Landingpage</span>
-          <span class="badge">Coaching</span>
+    <section id="angebote" class="intro-section">
+      <div class="container">
+        <div class="text-block center">
+          <span class="eyebrow">Angebote</span>
+          <h2>Zwei Wege. Eine Sprache.</h2>
+
+          <p>Nicht, weil dein Angebot schlecht ist.</p>
+          <p>Sondern weil du weißt, dass deine Website nicht zeigt, was du eigentlich kannst.</p>
+          <p>Es fällt dir schwer, dein tiefes Wissen und dein Können in die richtigen Worte zu packen?</p>
+          <p>Wenn du deine Homepage selbst liest – was fühlst du?</p>
+          <p>Eigentlich solltest du Stolz und Klarheit spüren. Wenn das noch fehlt, stell dir vor, wie es ab jetzt sein könnte:</p>
         </div>
 
-        <h3>Raus aus der Verzweiflung</h3>
-
-        <p>Dein Kind bringt dich an deine Grenzen.</p>
-
-        <p>Und niemand glaubt dir.</p>
-
-        <p>Eine Landingpage für Eltern, die endlich verstanden werden möchten.</p>
-
-        <a class="package-button" href="arbeitsproben.html#landingpage">Mehr lesen →</a>
-      </div>
-
-      <div class="sample-card">
-        <div class="badges">
-          <span class="badge">Instagram Post</span>
-          <span class="badge">Elternschaft</span>
+        <div class="highlight-lines">
+          <div class="highlight-line">Deine Kunden kommen zu dir, weil sie sich verstanden fühlen.</div>
+          <div class="highlight-line">Du wirst kontaktiert, weil Menschen dir vertrauen.</div>
         </div>
 
-        <h3>Du wirst gesehen.</h3>
+        <div class="text-block center">
+          <p>Und genau da beginnt meine Arbeit.</p>
+          <p>Ich finde die Worte, nach denen du schon so lange suchst. Klar, auf den Punkt und spürbar echt.</p>
+          <p>Wenn die Basis stimmt, kann man das Fundament bauen. Das sagte mein Vater immer.</p>
+          <p>Ich helfe dir, deine Texte so wirken zu lassen, dass du glücklich bist, dich darin wiedererkennst und langfristig echte Kundenbeziehungen aufbaust.</p>
+        </div>
 
-        <p>Beim Einkaufen die Blicke der anderen zu spüren, während du einfach nur versuchst Mama zu sein.</p>
+        <div class="cta-strip">
+          <a class="btn btn-primary" href="mailto:Jennifer.Bleichert@t-online.de?subject=Webseite%20prüfen%20lassen&body=Hallo%20Jennifer%2C%20kannst%20du%20dir%20meine%20Webseite%20bitte%20kurz%20anschauen%3F">Webseite prüfen lassen</a>
+          <a class="btn btn-secondary" href="#business">Pakete ansehen</a>
+        </div>
 
-        <p>Ein kurzer Text über Scham, Stärke und Zusammenhalt.</p>
+        <div class="mini-tags" aria-label="Leistungen">
+          <span class="tag">Website Copy</span>
+          <span class="tag">Landingpages</span>
+          <span class="tag">Storytelling</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Newsletter</span>
+          <span class="tag">Asynchrone Zusammenarbeit</span>
+        </div>
 
-        <a class="package-button" href="arbeitsproben.html#instagram">Mehr lesen →</a>
+        <div class="framed-note">
+          <p>Viele Unternehmer sind Experten in ihrem Bereich. Aber Experten schreiben selten für Menschen, die sie noch nicht kennen.</p>
+          <p>Sie schreiben für sich selbst. Oder für andere Experten – und genau dort entsteht die Lücke.</p>
+        </div>
+
+        <div class="offer-cards">
+          <article class="offer-card business">
+            <h3>Texte für dein Business</h3>
+            <p>Wenn der Plan steht, aber die Zeilen fehlen: Websites, Landingpages, Über-mich-Seiten und Inhalte für Menschen, die nicht lauter werden wollen – sondern klarer.</p>
+          </article>
+
+          <article class="offer-card moments">
+            <h3>Texte für besondere Momente</h3>
+            <p>Wenn der Kopf voll ist, aber das Papier leer bleibt: Ich schreibe deine Reden und persönlichen Texte für Abschiede, Feiern und Erinnerungen. Worte, die im Herzen bleiben.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section id="business" class="content-section">
+      <div class="container split">
+        <aside class="side-label">
+          <span class="eyebrow">Business</span>
+          <h2>Für dein Business</h2>
+          <p>Texte, die klar machen, warum dein Angebot nicht nur sichtbar, sondern spürbar werden darf.</p>
+        </aside>
 
-    <div style="text-align:center;margin-top:50px;">
-      <a href="arbeitsproben.html" class="big-link">Alle Arbeitsproben ansehen →</a>
-    </div>
+        <div class="paragraph-card">
+          <p>Menschen springen selten wegen eines schlechten Angebots ab. Oft gehen sie, weil sie sich nicht verstanden fühlen. Genau dort beginnt meine Arbeit.</p>
+          <p>Ich schaue auf deine Worte, auf Zwischentöne, Druckstellen und auf die Frage: Kommt hier wirklich an, wer du bist und was du möglich machst?</p>
+          <p>Für Websites, Landingpages, Über-mich-Texte und Inhalte, die Vertrauen schaffen, ohne sich nach Verkaufstricks anzufühlen.</p>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section id="besondere-momente">
+      <div class="container split">
+        <aside class="side-label">
+          <span class="eyebrow">Persönlich</span>
+          <h2>Für besondere Momente</h2>
+          <p>Worte für das, was nicht einfach nur gesagt, sondern wirklich gemeint ist.</p>
+        </aside>
 
-<div class="container"><div class="divider"></div></div>
+        <div class="paragraph-card">
+          <p>Manche Texte verkauft man nicht. Manche Texte trägt man im Herzen.</p>
+          <p>Eine Rede zum Geburtstag. Worte für eine Hochzeit. Ein Text zum Abschied. Oder eine Lebensgeschichte, die nicht verloren gehen soll.</p>
+          <p>Ich helfe dir, genau das zu sagen, was du meinst – nur klarer, wärmer und genau so, dass es die Menschen im Herzen erreicht.</p>
+        </div>
+      </div>
+    </section>
 
-<section>
-  <div class="container">
-    <p class="section-label">Über mich</p>
+    <section id="arbeitsweise" class="content-section">
+      <div class="container">
+        <div class="text-block center">
+          <span class="eyebrow">Arbeitsweise</span>
+          <h2>So arbeite ich</h2>
+          <p>Du musst nicht wissen, wie du anfangen sollst. Ein Satz reicht. Eine Nachricht reicht. Ein „Ich weiß nicht, wie ich das sagen soll“ reicht auch.</p>
+        </div>
 
-    <div class="about">
+        <div class="process-wrap">
+          <article class="process-box">
+            <h3>Wir sortieren.</h3>
+            <p>Ich höre heraus, was schon da ist – und was zwischen den Zeilen mitschwingt.</p>
+          </article>
+
+          <article class="process-box">
+            <h3>Wir formen.</h3>
+            <p>Ich bringe es in Worte. Ruhig, klar und genau so, dass es sich nach dir anfühlt.</p>
+          </article>
+
+          <article class="process-box">
+            <h3>Wir feilen.</h3>
+            <p>Du gibst Feedback. Wir feilen, bis es sich rund, aufrichtig und stimmig für dich anfühlt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber-mich" class="about">
+      <div class="container about-grid">
+        <div class="photo-placeholder">
+          <img src="jennifer-strandfoto.jpg" alt="Jennifer Bleichert am Strand mit Hund">
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow">Über mich</span>
+          <h2>Die Frau hinter den Worten</h2>
+
+          <p>Ich bin Jennifer.</p>
+          <p>Hochsensibel. Mutter eines neurodivergenten Kindes. Und eine Frau, die jahrelang lernen musste, zwischen den Zeilen zu lesen.</p>
+          <p>Und genau darin habe ich meine Liebe zur Ruhe des geschriebenen Wortes entdeckt.</p>
+          <p>Ich glaube nicht an manipulative Marketing-Tricks, sondern an Texte, die sich nach Menschen anfühlen.</p>
+          <p>Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Zielgruppen-Idee — sondern gelebte Realität.</p>
+          <p>Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.</p>
+
+          <div class="quote">
+            „Ich schreibe Texte. Egal für was — aber nie egal für wen.“
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Gemeinsam finden wir die richtigen Worte.</h2>
+        <p><a href="mailto:Jennifer.Bleichert@t-online.de">Jennifer.Bleichert@t-online.de</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
       <div>
-        <h2>Die Frau hinter den Worten</h2>
-
-        <p>Ich bin Jennifer.</p>
-
-        <p>Hochsensibel. Mutter eines neurodivergenten Kindes. Quereinsteigerin. Und jemand, der jahrelang lernen musste, zwischen den Zeilen zu lesen.</p>
-
-        <p>Ich glaube nicht an manipulative Marketing-Tricks. Ich glaube an Texte, die sich nach Menschen anfühlen.</p>
-
-        <p>Nicht perfekt. Nicht laut. Aber ehrlich.</p>
-
-        <p>Meine Erfahrung mit Hochsensibilität, ASS und PDA ist keine Zielgruppen-Idee — sondern gelebte Realität.</p>
-
-        <p>Und genau deshalb erkennen sich viele Menschen in meinen Worten wieder.</p>
+        <strong>Impressum</strong><br>
+        Jennifer Bleichert<br>
+        Murgtalstr. 31<br>
+        76437 Rastatt
       </div>
-
       <div>
-        <img src="jenny-bulldozer.jpg" alt="Jennifer Bleichert mit Bulldozer am Strand">
-
-        <div class="points">
-          <div class="point">
-            <div class="dot"></div>
-            <div>
-              <strong>Empathie als Stärke</strong>
-              Texte aus dem Innenleben der Zielgruppe heraus.
-            </div>
-          </div>
-
-          <div class="point">
-            <div class="dot"></div>
-            <div>
-              <strong>Kommunikation auf Augenhöhe</strong>
-              Keine künstliche Verknappung. Kein Verkaufsdruck.
-            </div>
-          </div>
-
-          <div class="point">
-            <div class="dot"></div>
-            <div>
-              <strong>Sprache, die entlastet</strong>
-              Weniger Reiz. Mehr Sicherheit.
-            </div>
-          </div>
-
-          <div class="point">
-            <div class="dot"></div>
-            <div>
-              <strong>Asynchron & ruhig</strong>
-              Zusammenarbeit ohne Dauer-Erreichbarkeit.
-            </div>
-          </div>
-        </div>
-
+        <strong>Kontakt</strong><br>
+        <a href="mailto:Jennifer.Bleichert@t-online.de">Jennifer.Bleichert@t-online.de</a><br>
+        <a href="tel:+4915736869598">01573 6869598</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="closing">
-  <div class="container">
-    <h2>Vielleicht liegt es gar nicht an deinem Angebot.</h2>
-
-    <div class="text-block">
-      <p>Vielleicht liegt es an den Worten.</p>
-
-      <p>Wenn du das Gefühl hast, dass deine Texte nicht zeigen, was du eigentlich kannst, dann schreib mir.</p>
-
-      <p>Ganz ohne Druck. Ganz in deinem Tempo.</p>
-
-      <a class="button" href="mailto:Jennifer.Bleichert@t-online.de?subject=Anfrage:%20Copywriting">Nachricht schreiben</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-© 2026 Jennifer Bleichert · Copywriting · Websites · Landingpages · Content · 100 % Remote
-</footer>
-
+  </footer>
 </body>
 </html>
